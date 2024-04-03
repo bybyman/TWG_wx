@@ -1,0 +1,3 @@
+import StyleTransfer
+
+StyleTransfer.styleTransfer()
