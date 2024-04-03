@@ -1,4 +1,3 @@
 # TWG_wx
 使用微信开发者工具用于滕王阁导游系统的搭建
-# token
-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
+
