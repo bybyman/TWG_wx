@@ -1,0 +1,38 @@
+<view data-weui-theme="{{theme}}">
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+    <mp-form>
+        <mp-cells>
+            <mp-cell title="昵称">
+                <input type="nickname" class="weui-input" placeholder="请输入昵称" bindinput="changeNickName" value="{{nickName}}"/>
+            </mp-cell>
+            <mp-cell title="性别">
+                <picker mode="selector" range="{{['男','女','其它']}}" value="{{0}}" bindchange="changeGender">
+                    <input class="weui-input" placeholder="请选择性别" value="{{gender}}"/>
+                </picker>
+            </mp-cell>
+            <mp-cell title="生日">
+                <picker mode="date" bindchange="changeBirthday">
+                    <input type="birthday" class="weui-input" placeholder="请选择生日" value="{{birthday}}"/>
+                </picker>
+
+            </mp-cell>
+            <mp-cell title="地区">
+                <picker mode="region" bindchange="changeRegion">
+                    <input type="region" class="weui-input" placeholder="请选择地区" value="{{region}}"/>
+                </picker>
+            </mp-cell>
+            <mp-cell title="个性签名">
+                <input type="signature" class="weui-input" placeholder="请输入个性签名" value="{{signature}}" bindinput="changeSignature"/>
+            </mp-cell>
+            <mp-cell title="用户类型">
+                <view type="signature" class="weui-input">{{userInfo.role}}</view>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <button style="width:184px;height:48px;background-color:#06C160;rounded-corner:8px;color:white;justify-item:center;margin-top:20rpx"
+    bindtap="saveDetail">
+        保存个人信息
+    </button>
+</view>

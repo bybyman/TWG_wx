@@ -1,0 +1,13 @@
+<!--pages/page/page1.wxml-->
+<view class="button-container">
+  <view class="button-container">
+    <button class="button button1" bindtap="goToPage1" style="position: absolute; left: 0rpx; top: 499rpx">灰度</button>
+    <button class="button button2" bindtap="goToPage2" style="position: absolute; left: 417rpx; top: 499rpx">压缩</button>
+    <button class="button button3" bindtap="goToPage3" style="position: absolute; left: 0rpx; top: 700rpx">锐化</button>
+    <button class="button button4" bindtap="goToPage4" style="position: absolute; left: 417rpx; top: 700rpx">增加色彩饱和度</button>
+    <button class="button button5" bindtap="goToPage5" style="position: absolute; left: 0rpx; top: 899rpx">旋转</button>
+    <button class="button button6" bindtap="goToPage6" style="position: absolute; left: 417rpx; top: 899rpx">抠图</button>
+  </view>
+  <image src="{{imageUrl}}" mode="aspectFit"></image>
+</view>
+

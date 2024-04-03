@@ -1,0 +1,102 @@
+<view class="sm-flex-col page">
+    <view class="sm-flex-col sm-flex-1 group_2">
+        <view class="sm-flex-col sm-justify-start sm-self-stretch sm-relative section" style="background-image: url({{imgPrefix + scene.Id + '.jpg'}})">
+            <view class="section_2"></view>
+            <text class="font pos_3">Id: {{scene.Id}}</text>
+            <text class="font_2 pos_4">点击以</text>
+            <text class="font_2 pos_5">更改图片</text>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">景点名称</text>
+                <text class="font text_6 ml-83">简称</text>
+            </view>
+            <view class="sm-mt-18 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Name}}" bindinput="changeName"></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.ShortName}}" bindinput="changeShortName"></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-row sm-self-stretch group_4">
+            <text class="sm-self-start font text_3" bindtap="changePosDisplay">位置信息 ⨠</text>
+            <text class="sm-self-end fontjwd text_3" style="display: {{dipPos}}">经纬度查看工具 ⨠</text>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6" style="display: {{dipPos}}">
+            <view class="sm-flex-row group_7">
+                <text class="font">西南纬度</text>
+                <text class="font text_6 ml-83">西南经度</text>
+            </view>
+            <view class="sm-mt-18 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Position.x[0]}}" bindinput="changePositionX1"></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.Position.y[0]}}" bindinput="changePositionY1"></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6" style="display: {{dipPos}}">
+            <view class="sm-flex-row group_7">
+                <text class="font">东北纬度</text>
+                <text class="font text_6 ml-83">东北经度</text>
+            </view>
+            <view class="sm-mt-18 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Position.x[1]}}" bindinput="changePositionX2"></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.Position.y[1]}}" bindinput="changePositionY2"></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_4">
+            <text class="sm-self-start font text_3">景点描述</text>
+            <view class="sm-flex-col sm-justify-start sm-items-start input text-wrapper mt-17">
+                <textarea class="font_3 text_4" value="{{newScene.Description}}" bindinput="changeDescription"></textarea>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">景点功能</text>
+                <text class="font text_6 ml-83">景点类型</text>
+            </view>
+            <view class="sm-flex-row group_7 mt-6">
+                <text class="fontlst">（学习、运动、餐饮、娱乐、休闲、居住）</text>
+                <text class="fontlst text_6 ml-13">(楼宇、广场、公园)</text>
+            </view>
+            <view class="mt-6 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Role}}" bindinput="changeRole" ></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.Type}}" bindinput="changeType"></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">街道</text>
+                <text class="font text_6 ml-83" style="margin-left: 300rpx">学院</text>
+            </view>
+            <view class="mt-6 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Street}}" bindinput="changeStreet" ></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.Academy}}" bindinput="changeAcademy"></input>
+                </view>
+            </view>
+        </view>
+<!--        <view class="sm-flex-col sm-self-stretch group_5">-->
+<!--            <text class="sm-self-start font text_5">Card Number</text>-->
+<!--            <view class="sm-mt-18 input button"></view>-->
+<!--        </view>-->
+        <view class="sm-flex-col sm-justify-start sm-items-center button_2 text-wrapper_2"  bindtap="onButtonSave">
+            <text class="font text_7">保存修改</text>
+        </view>
+        <text class="sm-self-center font_3 text_8" bindtap="onButtonRe">还原修改</text>
+    </view>
+</view>

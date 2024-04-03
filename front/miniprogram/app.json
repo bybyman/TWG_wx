@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/tabFunction/tabFunction",
+    "pages/tabSpace/tabSpace",
+    "pages/tabMine/tabMine",
+    "pages/sceneRec/sceneRec",
+    "pages/map/map",
+    "pages/sceneDetail/sceneDetail",
+    "pages/routeDetail/sceneDetail",
+    "pages/sceneManager/sceneManager",
+    "pages/sceneList/sceneList",
+    "pages/routeList/sceneList",
+    "pages/sceneModifier/sceneModifier",
+    "pages/routeModifier/sceneModifier",
+    "pages/DIP/index/index",
+    "pages/DIP/page/page1",
+    "pages/DIP/page/button1/page",
+    "pages/DIP/page/button2/page",
+    "pages/DIP/page/button3/page",
+    "pages/DIP/page/button4/page",
+    "pages/DIP/page/button5/page",
+    "pages/DIP/page/button6/page",
+    "pages/AIGen/index/index",
+    "pages/AIGen/logs/logs",
+    "pages/AIGen/modifyPhoto/modify",
+    "pages/AIGen/emotionChoose/emotionChoose",
+    "pages/AIGen/emotionEdit/emotionEdit",
+    "pages/AIGen/spliceMenu/spliceMenu",
+    "pages/Aboutsystem/Aboutsystem",
+    "pages/Introduction/Introduction",
+    "pages/personalDetail/personalDetail",
+    "pages/about_update/about_update",
+    "pages/about_intro/about_intro",
+    "pages/BBS/BBS"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#58adc2",
+    "backgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "师大导览",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tabFunction/tabFunction",
+        "text": "首页",
+        "iconPath": "/images/tab/1.png",
+        "selectedIconPath": "/images/tab/11.png"
+      },
+      {
+        "pagePath": "pages/tabSpace/tabSpace",
+        "text": "空间",
+        "iconPath": "/images/tab/2.png",
+        "selectedIconPath": "/images/tab/22.png"
+      },
+      {
+        "pagePath": "pages/tabMine/tabMine",
+        "text": "我的",
+        "iconPath": "/images/tab/3.png",
+        "selectedIconPath": "/images/tab/33.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "debugOptions": {
+    "enableFPSPanel": true
+  }
+}

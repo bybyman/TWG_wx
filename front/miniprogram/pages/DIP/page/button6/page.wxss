@@ -1,0 +1,44 @@
+.button {
+  position: absolute; /* 添加这行 */
+  bottom: 100rpx; /* 添加这行 */
+  width: 100%; /* 添加这行 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* 添加这行 */
+  background-color: #f0f0f0; /* 添加这行 */
+}
+
+.button1 {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  color: #ffffff;
+  background-color: #DAA520;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1:hover {
+  background-color: #2e8b57;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+image {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  right: 15%;
+  top: 40%;
+  transform: translateY(-50%);
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}

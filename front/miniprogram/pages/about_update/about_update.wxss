@@ -1,0 +1,53 @@
+/* pages/about_update/about_update.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background-color: gray;
+    margin: 20px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.version {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.info {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #1296db;
+    color: white;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 300;
+}

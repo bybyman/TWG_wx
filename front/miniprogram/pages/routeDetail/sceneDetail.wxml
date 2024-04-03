@@ -1,0 +1,113 @@
+<view class="sd-flex-col page">
+    <view class="sd-flex-row sd-justify-between sd-items-center section" style="background-image: url({{image}});">
+<!--    style="background-image: url('https://ide.code.fun/api/image?token=655f92f0fcfbac001134afb0&name=2f7712ecc301a21fdac4004d5bc230f2.png');">-->
+        <image
+                class="image_2"
+                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/644df59c5a7e3f0310442a0a/644f3f24b98f5d00116694c9/a09d695c5eec5706f28e992b6b074584.png"
+        />
+    </view>
+    <view class="sd-flex-col sd-relative section_2">
+        <view class="sd-flex-col group">
+            <text class="sd-self-start font text">{{scene.Name}}</text>
+            <view class="sd-flex-row sd-items-center sd-self-stretch mt-13">
+                <image
+                        class="image_3"
+                        src="/images/mapIcon/gos_act.png"
+                />
+                <text class="sd-ml-8 font_2 text_2">{{scene.RouteTrans}}</text>
+            </view>
+        </view>
+        <view class="sd-flex-col group_2">
+            <view class="sd-flex-row group_3">
+                <view id="0" class="sd-flex-col sd-justify-start" bindtap="switchBars"><text class="font_3 text_4">路线信息</text></view>
+                <view id="1" class="sd-flex-col sd-justify-start text-wrapper" bindtap="switchBars"><text class="font_3 text_5">用户评价</text></view>
+                <view id="2" class="sd-flex-col sd-justify-start text-wrapper_2" bindtap="switchBars"><text class="font_3 text_6">景点照片</text></view>
+                <view id="3" class="sd-flex-col sd-justify-start text-wrapper_3" bindtap="switchBars"><text class="font_3 text_7">更多</text></view>
+            </view>
+            <view class="sd-flex-col sd-justify-start sd-items-start divider">
+                <view class="sd-shrink-0 section_3" style="margin-left:{{dividorMargin}}"></view>
+            </view>
+        </view>
+        <view class="sd-flex-col group_4" wx:if="{{showBars[0]}}">
+            <view class="sd-flex-col">
+                <text class="sd-self-start text_8">基础信息</text>
+                <view class="sd-self-stretch group_5 mt-15">
+                    <text class="text_9">{{scene.Distance}}m, {{scene.Time}}min</text>
+                </view>
+            </view>
+            <view class="sd-flex-col sd-mt-4">
+                <text class="sd-self-start text_8">路线简介</text>
+                <view class="sd-self-stretch group_5 mt-15">
+                    <text class="text_9">{{scene.Description}}</text>
+                </view>
+            </view>
+            <view class="sd-mt-36 sd-flex-col sd-justify-start sd-items-center button text-wrapper_4" bindtap="seeInMap">
+                <text class="font text_11">地图上查看</text>
+            </view>
+        </view>
+        <view class="sd-flex-col group_4" wx:if="{{showBars[1]}}">
+            <view class="sd-flex-col" wx:if="{{!scene.Comments}}">
+                <text class="sd-self-start text_8">暂无评论</text>
+                <view class="sd-self-stretch group_5 mt-15">
+                    <text class="text_9">
+                        暂无评论
+                    </text>
+                </view>
+            </view>
+            <view class="sd-flex-col sd-mt-8" wx:for="{{scene.Comments}}" wx:key="index">
+                <view class="sd-flex-row sd-justify-start sd-items-center">
+                    <image
+                            class="image_4"
+                            src="{{item.user.avatarUrl}}"
+                    />
+                    <text class="sd-ml-8 text_8">{{item.user.nickName}}</text>
+                    <view class="text_time">{{item.time}}</view>
+                </view>
+                <view class="sd-self-stretch group_5">
+                    <text class="text_9">
+                        {{item.content}}
+                    </text>
+                </view>
+            </view>
+            <view class="sd-mt-36 sd-flex-col sd-justify-start sd-items-center button text-wrapper_4" bindtap="publishComment">
+                <text class="font text_11">发表评论</text>
+            </view>
+        </view>
+        <view class="sd-flex-col group_4" wx:if="{{showBars[2]}}">
+            <view class="sd-flex-col">
+                <text class="sd-self-start text_8">照片墙</text>
+                <view class="sd-self-stretch group_5 mt-15" wx:if="{{!photos||photos.length==0}}">
+                    <text class="text_9">
+                        无更多照片
+                    </text>
+                </view>
+            </view>
+            <scroll-view scroll-y style="width: 100%; height: 100%;" type="custom">
+                <grid-view type="masonry" cross-axis-count="{{crossAxisCount}}" cross-axis-gap="{{crossAxisGap}}" main-axis-gap="{{mainAxisGap}}">
+                    <block wx:for="{{photos}}" wx:key="index">
+                        <grid-view-item>
+                            <image
+                                    class="image_5"
+                                    src="{{item}}"
+                            />
+                        </grid-view-item>
+                    </block>
+                </grid-view>
+            </scroll-view>
+        </view>
+        <view class="sd-flex-col group_4" wx:if="{{showBars[3]}}">
+            <view class="sd-flex-col">
+<!--                <text class="sd-self-start text_8">Description</text>-->
+                <view class="sd-self-stretch group_5 mt-15">
+                    <text class="text_9">
+                        没有更多信息
+                    </text>
+<!--                    <text class="font_2 text_10">Read More</text>-->
+                </view>
+            </view>
+<!--            <view class="sd-mt-36 sd-flex-col sd-justify-start sd-items-center button text-wrapper_4">-->
+<!--                <text class="font text_11">Save a Trip</text>-->
+<!--            </view>-->
+        </view>
+    </view>
+</view>

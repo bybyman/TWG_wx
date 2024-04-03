@@ -1,0 +1,9 @@
+ <view class="page-body-wrapper">
+  <image class="logo" src='https://mp-0d73851d-61ab-4d21-b2ca-e6a6894c63d3.cdn.bspapp.com/OIG.zuyVax.jfif' mode='widthFix'></image>
+  <image class="bg-img" src='/images/background.png' mode='widthFix'></image>
+  <view class="btn-area">
+    <navigator class="btn btn1" hover-class="none" url="../modifyPhoto/modify"><text class="icon1"></text><text class="text">AI风格转化</text></navigator>
+    <navigator class="btn btn2" hover-class="none" url="../spliceMenu/spliceMenu"><text class="icon2"></text><text class="text">AI文本生成</text></navigator>
+  </view>
+</view>
+

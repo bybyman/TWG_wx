@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<!--<navigation-bar title="图片编辑" back="{{false}}" color="black" background="#FFF"></navigation-bar>-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <button bindtap="chooseImage" style="position: relative; left: 0rpx; top: 493rpx">选择图片</button>
+  </view>
+</scroll-view>

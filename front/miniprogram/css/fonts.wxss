@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "得意黑 斜体";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/aoOTENm4OpZG.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/BSvJZ1Ybvafs.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "站酷高端黑 Regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/to4R568Rpj48.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/9oQ0moA0MQFH.woff") format("woff");
+  font-display: swap;
+}

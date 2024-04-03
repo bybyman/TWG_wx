@@ -1,0 +1,86 @@
+<view class="sm-flex-col page">
+    <view class="sm-flex-col section">
+        <view class="sm-flex-col sm-justify-start sm-items-start sm-self-start divider">
+            <view class="sm-shrink-0 section_2"></view>
+        </view>
+        <view class="sm-flex-row sm-items-center sm-self-stretch group_4">
+            <image
+                    class="image_7"
+                    src="{{avatarUrl}}"
+            />
+            <textarea class="sm-ml-8 font text_5" placeholder="快来发表你的想法吧！" bindinput="onContent">{{content}}</textarea>
+        </view>
+        <view class="sm-flex-row sm-items-end equal-division group_5">
+            <view class="sm-flex-row sm-items-center equal-division-item group_6">
+                <image
+                        class="image_10"
+                        src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=d96c9b825fc99584569769bc1cd1fa59.png"
+                />
+                <text class="font_2 ml-7" bindtap="onCancel">取消编辑</text>
+            </view>
+            <image
+                    class="image_8 horiz-divider"
+                    src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=c050c24c666af7c02fb5af09f447dce2.png"
+            />
+            <view class="sm-flex-row sm-justify-center sm-items-center equal-division-item_2 group_7">
+                <image
+                        class="image pos"
+                        src="{{imageUrl?imageUrl:'https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=0c1ca6fb3a03cd873852bfcbc9378975.png'}}"
+                />
+                <text class="font_2" bindtap="onAddImage">上传图片</text>
+            </view>
+            <image
+                    class="image_9 horiz-divider"
+                    src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=c050c24c666af7c02fb5af09f447dce2.png"
+            />
+            <view class="sm-flex-row sm-items-center image_9 group_8">
+                <image
+                        class="sm-shrink-0 image"
+                        src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=f9598373b24d3602a5edf7ecccaaf1c1.png"
+                />
+                <text class="sm-ml-6 font_2" bindtap="onConfirm">发表评论</text>
+            </view>
+        </view>
+        <view class="sm-shrink-0 sm-self-start divider_2"></view>
+    </view>
+
+    <view class="sm-flex-col section_10 mt-9" wx:for="{{comments}}" wx:key="index">
+        <view class="sm-flex-row sm-justify-between sm-items-center">
+            <view class="sm-flex-row sm-items-center">
+                <view class="sm-flex-col sm-justify-start sm-items-center image-wrapper">
+                    <image
+                            class="image_12"
+                            src="{{item.user.avatarUrl}}"
+                    />
+                </view>
+                <view class="sm-flex-col ml-9">
+                    <text class="font_2 text_10">{{item.user.nickName}}</text>
+                    <view class="sm-mt-4 sm-flex-row sm-items-center">
+                        <text class="font_4 text_11">{{item.time}}</text>
+                        <image
+                                class="image ml-3"
+                                src="https://ide.code.fun/api/image?token=6584b2d9bddbb700118497cd&name=590e911b6cf828990e8cd4cbfd77b028.png"
+                        />
+                    </view>
+                </view>
+            </view>
+            <image
+                    class="image_13"
+                    src="https://ide.code.fun/api/image?token=6584b2d9bddbb700118497cd&name=e9375ecf2fb8dd765e746f54c4174f7a.png"
+            />
+        </view>
+        <view class="sm-flex-col group_10 mt-15">
+            <view class="sm-self-start group_11">
+                <text class="font_3 text_13"></text>
+                <text class="text_12">
+                    {{item.content}}
+                </text>
+            </view>
+            <image
+                    class="sm-shrink-0 sm-self-stretch image_14"
+                    src="{{item.imageUrl}}"
+            />
+
+        </view>
+    </view>
+</view>

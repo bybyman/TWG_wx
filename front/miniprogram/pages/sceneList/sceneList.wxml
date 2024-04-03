@@ -1,0 +1,105 @@
+<view class="sl-flex-col sl-flex-1 group">
+    <view class="sl-flex-col group_2">
+        <view class="sl-flex-row sl-justify-between sl-items-center group_4">
+            <text class="font_2 text_3">热门景点</text>
+            <view class="sl-flex-row sl-items-center group_5">
+                <text class="font_3 text_4">分类</text>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-between group_6 view" bindtap="switchT">
+            <view class="sl-flex-row sl-justify-start sl-items-center button" data-tc="0" bindtap="switchT">
+                <image
+                        class="sl-shrink-0 image_5"
+                        src="/images/WATERFALL.png"
+                />
+                <text class="font text_5 ml-7">餐饮娱乐</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_2" data-tc="1" bindtap="switchT">
+                <image
+                        class="sl-shrink-0 image_6"
+                        src="/images/RIVER.png"
+                />
+                <text class="font text_5 ml-7">自然风光</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_3" data-tc="2" bindtap="switchT">
+                <image
+                        class="sl-shrink-0 image_7"
+                        src="/images/FOREST.png"
+                />
+                <text class="font text_6 ml-7">教学自习</text>
+            </view>
+            <image
+                    class="button_4"
+                    src=""
+            />
+        </view>
+        <view class="sl-flex-row group_6 view_2">
+            <view class="sl-ml-12 sl-flex-col sl-flex-1 section"  wx:for="{{cataScenes}}" wx:key="index"
+            style="background-image: url({{imagePrefix + item.Id + '.jpg'}})" data-scene="{{item}}" bindtap="toSceneDetail">
+                <view class="sl-flex-col section_3">
+                    <view class="sl-flex-row sl-justify-between sl-items-center">
+                        <text class="font_4 text_7">{{item.Name}}</text>
+                        <text class="font_4 text_8">{{item.Type}}</text>
+                    </view>
+                    <view class="sl-mt-6 sl-flex-row sl-justify-between">
+                        <view class="sl-flex-row">
+                            <image
+                                    class="sl-shrink-0 image_8"
+                                    src="/images/mapIcon/wos.png"
+                            />
+                            <text class="font_5 text_10 ml-5">{{item.Street}}</text>
+                        </view>
+                        <text class="font_5 text_11">{{item.MAcademy}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-between sl-items-center group_7">
+            <text class="font_2">景点总览</text>
+            <view class="sl-flex-row sl-items-center group_8">
+                <text class="font_3 text_13 shrink-font">点击以查看详情</text>
+            </view>
+        </view>
+        <view class="sl-flex-col group_9">
+            <view class="sl-flex-col sl-items-start sl-self-stretch list">
+                <view
+                        class="sl-flex-row sl-items-center sl-mt-12 group_10 list-item"
+                        wx:for="{{scenes}}"
+                        wx:for-item="item"
+                        wx:for-index="index"
+                        wx:key="index"
+                        data-scene="{{item}}"
+                        bindtap="toSceneDetail"
+                >
+<!--                    <view id="{{item.Id}}" bindtap="toSceneDetail">-->
+                    <image
+                            class="sl-shrink-0 image_9"
+                            src="{{imagePrefix + item.Id + '.jpg'}}"
+                    />
+                    <view class="sl-ml-14 sl-flex-col sl-flex-1">
+                        <text class="sl-self-start font_6 text_14">{{item.Name}}</text>
+                        <view class="sl-flex-row sl-items-center sl-self-stretch group_11">
+                            <image
+                                    class="image_10"
+                                    src="/images/mapIcon/wos.png"
+                            />
+                            <text class="sl-ml-4 font_7">{{item.Street}}</text>
+                        </view>
+                        <view class="sl-self-stretch group_12">
+                            <text class="font_8 text_15">
+                                {{item.Description}}
+                            </text>
+                            <text class="font_9 text_16">{{item.Role}}</text>
+                        </view>
+                        <view class="sl-flex-row sl-items-baseline sl-self-stretch">
+<!--                            <text class="font_10 text_17">{{item.Role}}</text>-->
+<!--                            <text class="sl-ml-4 font_11 text_18">{{item.Role}}</text>-->
+                        </view>
+                    </view>
+<!--                    </view>-->
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="sl-shrink-0 sl-relative section_5"></view>
+</view>

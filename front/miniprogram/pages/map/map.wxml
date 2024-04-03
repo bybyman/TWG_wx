@@ -1,0 +1,59 @@
+<view class="mapMain-flex-col mapMain-justify-start mapMain-relative page">
+    <map class="mainMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" polyline="{{polyline}}"
+         id="map" markers="{{markers}}" show-location bindtap="handleMapTapMain"></map>
+    <view class="mapMain-flex-row mapMain-items-center section_2 pos_5">
+        <image
+                class="image_4"
+                src="/images/mapIcon/search.png"
+        />
+        <input class="mapMain-ml-14 input_1 text_2" placeholder="搜索地点" placeholder-style="color:#999999" bindinput="handleSearchInput" value="{{searchValue}}"/>
+        <view class="dropdown" wx:if="{{showDropdown}}">
+            <view wx:for="{{dropdownOptions}}" wx:key="{{index}}" bindtap="dispSearch" id="{{item}}">
+                {{item}}
+            </view>
+        </view>
+    </view>
+    <view class="mapMain-flex-row mapMain-items-center section_3 pos_6" style="display:{{showDetailCard?'flex':'none'}}">
+        <image
+                class="mapMain-shrink-0 image_5"
+                src="{{cardPhoto}}"
+        />
+        <view class="mapMain-flex-col mapMain-flex-1 ml-19" bindtap="toSceneDetail">
+            <text class="mapMain-self-start text_3">{{cardName}}</text>
+            <view class="mapMain-flex-row mapMain-items-center mapMain-self-stretch mt-11">
+                <image
+                        class="image_6"
+                        src="/images/mapIcon/wos.png"
+                />
+                <text class="mapMain-ml-4 text_4">{{destDist}} 米</text>
+            </view>
+            <text class="mapMain-self-start text_5">(点击以查看详情)</text>
+        </view>
+    </view>
+    <view class="mapMain-flex-row mapMain-justify-between mapMain-items-center section_4 pos_8" wx:if="{{lm=='l'}}">
+        <image
+                class="image_7"
+                src="/images/mapIcon/gos_act.png"
+        />
+        <image
+                class="image_8"
+                src="/images/mapIcon/met_dea.png" bindtap="mclick"
+        />
+    </view>
+    <view class="mapMain-flex-row mapMain-justify-between mapMain-items-center section_4 pos_8" wx:if="{{lm=='m'}}">
+        <image
+                class="image_7"
+                src="/images/mapIcon/gos_dea.png" bindtap="lclick"
+        />
+        <image
+                class="image_8"
+                src="/images/mapIcon/met_act.png"
+        />
+    </view>
+    <view class="mapMain-flex-col mapMain-justify-start mapMain-items-center button image-wrapper_2" bindtap="goClick">
+        <image
+                class="image_7"
+                src="/images/mapIcon/gor.png"
+        />
+    </view>
+</view>

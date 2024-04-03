@@ -1,0 +1,75 @@
+.button {
+  position: absolute; /* 添加这行 */
+  bottom: 0; /* 添加这行 */
+  width: 100%; /* 添加这行 */
+  display: flex;
+  justify-content: space-around; /* 修改这里 */
+  align-items: center;
+  padding: 20px; /* 添加这行 */
+  background-color: #f0f0f0; /* 添加这行 */
+}
+
+.button1{
+  width: 200px;
+  height: 50px;
+  margin: 120px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.button2{
+  width: 200px;
+  height: 50px;
+  margin: 280px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.button3{
+  width: 200px;
+  height: 50px;
+  margin: 200px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1 { background-color: #1e90ff; }
+.button2 { background-color: #2e8b57; }
+.button3 { background-color: #ff4500; }
+
+.button1:hover, .button2:hover, .button3:hover {
+  background-color: #2e8b57;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+image {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  right: 15%;
+  top: 40%;
+  transform: translateY(-50%);
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}

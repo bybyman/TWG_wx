@@ -1,0 +1,128 @@
+<view class="sl-flex-col sl-flex-1 group">
+    <view class="sl-flex-col group_2">
+        <view class="sl-flex-row sl-justify-between group_6">
+            <view class="sl-flex-row sl-justify-start sl-items-center button" data-mindex="0" bindtap="switchManplay">
+                <image
+                        class="sl-shrink-0 image_5"
+                        src=""
+                />
+                <text class="font text_5 ml-7">景点管理</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_2" data-mindex="1" bindtap="switchManplay">
+                <image
+                        class="sl-shrink-0 image_6"
+                        src=""
+                />
+                <text class="font text_5 ml-7">路线管理</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_3" data-mindex="2" bindtap="switchManplay">
+                <image
+                        class="sl-shrink-0 image_7"
+                        src=""
+                />
+                <text class="font text_6 ml-7">其它管理</text>
+            </view>
+            <image
+                    class="button_4"
+                    src=""
+            />
+        </view>
+        <view style="display: {{manplay[0]}}">
+        <view class="sl-flex-row sl-justify-between sl-items-center group_7">
+            <text class="font_2">景点列表</text>
+            <view class="sl-flex-row sl-items-center group_8">
+                <text class="font_3 text_13 shrink-font">点击以进行修改</text>
+            </view>
+        </view>
+        <view class="sl-flex-col group_9">
+            <view class="sl-flex-col sl-items-start sl-self-stretch list">
+                <view
+                        class="sl-flex-row sl-items-center sl-mt-12 group_10 list-item"
+                        wx:for="{{scenes}}"
+                        wx:for-item="item"
+                        wx:for-index="index"
+                        wx:key="index"
+                        data-scene="{{item}}"
+                        bindtap="toSceneModifier"
+                >
+                    <!--                    <view id="{{item.Id}}" bindtap="toSceneDetail">-->
+                    <image
+                            class="sl-shrink-0 image_9"
+                            src="{{imagePrefix + item.Id + '.jpg'}}"
+                    />
+                    <view class="sl-ml-14 sl-flex-col sl-flex-1">
+                        <text class="sl-self-start font_6 text_14">{{item.Name}}</text>
+                        <view class="sl-flex-row sl-items-center sl-self-stretch group_11">
+                            <image
+                                    class="image_10"
+                                    src="/images/mapIcon/wos.png"
+                            />
+                            <text class="sl-ml-4 font_7">中环大道</text>
+                        </view>
+                        <view class="sl-self-stretch group_12">
+                            <text class="font_8 text_15">
+                                {{item.Description}}
+                            </text>
+                            <text class="font_9 text_16">{{item.Role}}</text>
+                        </view>
+                        <view class="sl-flex-row sl-items-baseline sl-self-stretch">
+                            <text class="font_10 text_17">{{item.Id}}</text>
+                            <!--                            <text class="sl-ml-4 font_11 text_18">{{item.Role}}</text>-->
+                        </view>
+                    </view>
+                    <!--                    </view>-->
+                </view>
+            </view>
+        </view>
+        </view>
+        <view style="display: {{manplay[1]}}">
+            <view class="sl-flex-row sl-justify-between sl-items-center group_7">
+                <text class="font_2">路线列表</text>
+                <view class="sl-flex-row sl-items-center group_8">
+                    <text class="font_3 text_13 shrink-font">点击以进行修改</text>
+                </view>
+            </view>
+            <view class="sl-flex-col group_9">
+                <view class="sl-flex-col sl-items-start sl-self-stretch list">
+                    <view
+                            class="sl-flex-row sl-items-center sl-mt-12 group_10 list-item"
+                            wx:for="{{routes}}"
+                            wx:for-item="item"
+                            wx:for-index="index"
+                            wx:key="index"
+                            data-route="{{item}}"
+                            bindtap="toRouteModifier"
+                    >
+                        <!--                    <view id="{{item.Id}}" bindtap="toSceneDetail">-->
+                        <image
+                                class="sl-shrink-0 image_9"
+                                src="{{imagePrefixr + item.Id + '.jpg'}}"
+                        />
+                        <view class="sl-ml-14 sl-flex-col sl-flex-1">
+                            <text class="sl-self-start font_6 text_14">{{item.Name}}</text>
+                            <view class="sl-flex-row sl-items-center sl-self-stretch group_11">
+                                <image
+                                        class="image_10"
+                                        src="/images/mapIcon/wos.png"
+                                />
+                                <text class="sl-ml-4 font_7">{{item.Route}}</text>
+                            </view>
+                            <view class="sl-self-stretch group_12">
+                                <text class="font_8 text_15">
+                                    {{item.Description}}
+                                </text>
+                                <text class="font_9 text_16">{{item.Distance}}m,{{item.Time}}min</text>
+                            </view>
+                            <view class="sl-flex-row sl-items-baseline sl-self-stretch">
+                                <text class="font_10 text_17">{{item.Id}}</text>
+                                <!--                            <text class="sl-ml-4 font_11 text_18">{{item.Role}}</text>-->
+                            </view>
+                        </view>
+                        <!--                    </view>-->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="sl-shrink-0 sl-relative section_5"></view>
+</view>
