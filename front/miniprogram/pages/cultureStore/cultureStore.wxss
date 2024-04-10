@@ -1,0 +1,76 @@
+/* pages/cultureStore/cultureStore.wxss */
+.major{ white-space: nowrap; padding:10rpx 10rpx;}
+.major .box{ text-align: center; width:145rpx; display: inline-block; }
+.major .pic{width:100rpx; height: 100rpx;}
+.major .txt{ font-size:24rpx; margin-top:6rpx;} 
+/**index.wxss**/
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+.search-left{
+  background-color: #eee;
+  flex: 2;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+.search-left image{
+  width: 48rpx;
+  height: 48rpx;
+  padding: 10rpx 20rpx;
+  vertical-align: middle;
+  
+}
+.search-left input{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+.search-right{
+  padding-left: 20rpx;
+}
+.search-right image{
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+}
+
+.goods-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.good{
+  width: 330rpx;
+  height: 500rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.good image{
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 10rpx;
+}
+.good .title{
+  box-sizing: border-box;
+  padding: 1rpx 10rpx;
+  margin-bottom: 10rpx;
+  height: 70rpx;
+}
+.good .tag{
+  padding: 0 10rpx;
+}
+.good .tag text{
+  color: gray;
+  font-size: 20rpx;
+  border: 1rpx solid gray;
+  border-radius: 5rpx;
+  margin-left: 5rpx;
+  padding: 2rpx;
+}

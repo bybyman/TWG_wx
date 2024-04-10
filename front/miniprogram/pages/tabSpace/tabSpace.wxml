@@ -1,57 +1,64 @@
 <!--index.wxml-->
-<view class="container">
-    <view class="head">
-        <view id="mainWeather"  class="flex-row group_2">
-            <view class="flex-row">
-                <image class="image_5" src="/images/locate.png"/>
-                南昌县
-                <image class="image_5" src="/images/verserec.png"/>
-                <image class="image_search" src="/images/search.png"/>
-            </view>
-        </view>
-        <view class="flex-col flex-auto group_2 space-y-64">
-            <view class="flex-col section space-y-26">
-                <view class="card-head">
-                    <text>{{dateFormat}}</text>
-                    <text>{{timeFormat}}</text>
-                </view>
-                <view class="weather-area flex-col items-start space-y-4">
-                    <image class="weather_icon" src="{{weatherIcon}}"/>
-                    <view class="weather-text">
-                        <text><text style="color: aquamarine;">{{weatherText}} </text><text style="color: yellow;">{{temperature}}℃ </text>| <text style="color: blue;">湿度{{humidity}}%</text></text>
-                        <text><text style="color: rgb(149, 200, 207);">{{windDirection}} </text>{{windSpeed}}级 <text style="color: rgb(213, 147, 229);">{{pressure}}千帕</text></text>
-                    </view>
-                </view>
-                <image class="self-end image_8"
-                       src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/644df59c5a7e3f0310442a0a/644df6f654fe0000115dfa30/16828311058595125490.png"
-                       bindtap="onWRefresh"/>
-                <text class="tips-text">更新时间日期</text>
-            </view>
-        </view>
-    </view>
-    <view class="main">
-<!--        <view class="item" bindtap="toChatGPT">-->
-<!--            <image class="item-image" src="/images/index/chatai.png"></image>-->
-<!--            <text class="item-text">智能对话 ></text>-->
-<!--        </view>-->
-<!--        <view class="item" bindtap="toTranslator">-->
-<!--            <image class="item-image" src="/images/index/translation.png"></image>-->
-<!--            <text class="item-text">快捷翻译 ></text>-->
-<!--        </view>-->
-        <view class="item" bindtap="toImageProcess">
-            <image class="item-image" src="/images/index/imgPro.png"></image>
-            <text class="item-text">图像处理工具 ></text>
-        </view>
-        <view class="item" bindtap="toOtherTools">
-            <image class="item-image" src="/images/index/tools.png"></image>
-            <text class="item-text">AI图像工具 ></text>
-        </view>
-        <view class="item" bindtap="toPerson">
-            <image class="item-image" src="/images/index/personal.png"></image>
-            <text class="item-text">交流中心 ></text>
-        </view>
-    </view>
-    <view class="foot">
-        <text>功能完善中</text>
-    </view>
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="container">
+      <view class="head">
+          <view id="mainWeather"  class="flex-row group_2">
+              <view class="flex-row">
+                  <image class="image_5" src="/images/locate.png"/>
+                  南昌县, 滕王阁景区
+                  <image class="image_5" src="/images/verserec.png"/>
+                  <!-- <image class="image_search" src="/images/search.png"/> -->
+              </view>
+          </view>
+          <view class="flex-col flex-auto group_2 space-y-64">
+              <view class="flex-col section space-y-26">
+                  <view class="card-head">
+                      <text>{{dateFormat}} {{timeFormat}}</text>
+                      <!-- <text></text> -->
+                  </view>
+                  <view class="weather-area flex-col items-start space-y-4">
+                      <image class="weather_icon" src="{{weatherIcon}}"/>
+                      <view class="weather-text">
+                          <text><text>{{weatherText}} </text><text>{{temperature}}℃ </text>| <text >湿度{{humidity}}%</text></text>
+                          <text><text>{{windDirection}} </text>{{windSpeed}}级 <text >{{pressure}}千帕</text></text>
+                      </view>
+                  </view>
+                  <image class="self-end image_8"
+                        src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/644df59c5a7e3f0310442a0a/644df6f654fe0000115dfa30/16828311058595125490.png"
+                        bindtap="onWRefresh"/>
+                  <text class="tips-text">更新时间日期</text>
+              </view>
+          </view>
+      </view>
+      <view class="punch">
+          <view class="card">
+              <view class="punch-img">
+                <image src="/images/personal/th.jpg" alt=""/>
+              </view>
+              <view class="punch-content">
+                  <view class="title">太极广场</view>
+                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
+              </view>
+          </view>
+          <view class="card">
+              <view class="punch-img">
+                <image src="/images/personal/th.jpg" alt=""/>
+              </view>
+              <view class="punch-content">
+                  <view class="title">太极广场</view>
+                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
+              </view>
+          </view>
+          <view class="card">
+              <view class="punch-img">
+                <image src="/images/personal/th.jpg" alt=""/>
+              </view>
+              <view class="punch-content">
+                  <view class="title">太极广场</view>
+                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
+              </view>
+          </view>
+      </view>
+  </view>
 </view>

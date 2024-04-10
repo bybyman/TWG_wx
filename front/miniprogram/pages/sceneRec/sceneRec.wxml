@@ -1,4 +1,5 @@
 <view class="shopping-flex-col page">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
     <view class="shopping-flex-col group_5 space-y-72">
         <view class="shopping-flex-col space-y-30">
             <image

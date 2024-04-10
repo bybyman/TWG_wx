@@ -6,7 +6,9 @@ Page({
      */
     data: {
         currentVersion: null,
-        latestVersion: null
+        latestVersion: null,
+        defaultData: {"title": "检查更新"}
+
     },
 
     getCurrentVersion: function () {

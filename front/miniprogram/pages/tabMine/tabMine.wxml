@@ -1,5 +1,5 @@
 <view class="personalContainer">
-
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
   <view class="user-section">
     <image class="bg" src="{{backgroundUrl}}"></image>
     <view class="user-info-box" bindtap="getUserInfo">
@@ -13,6 +13,7 @@
   </view>
 
 <view class="cover-container" style="transform: {{coverTransform}}; transition: {{coveTransition}}">
+  <!-- 这里把这个图片变成这个色就行了 #F3DAD9 -->
   <image class="arc" src="/images/personal/arc.png"></image>
   <!-- 个人中心导航 -->
   <scroll-view class="major" scroll-x>   
@@ -23,6 +24,10 @@
       <navigator class="box" url="/pages/tabMain/tabMain" bindtap="checks">
         <image class="pic" src="/images/personal/personal.png"/>
         <view class="txt">个人信息</view>
+      </navigator>
+      <navigator class="box" url="/pages/about_update/about_update" bindtap="toSceneManager">
+        <image class="pic" src="/images/personal/bang.png"/>
+        <view class="txt">信息管理</view>
       </navigator>
       <navigator class="box" url="/pages/about_update/about_update">
         <image class="pic" src="/images/personal/bang.png"/>

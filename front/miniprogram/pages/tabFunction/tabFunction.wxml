@@ -1,4 +1,5 @@
 <view class="flex-col flex-auto group_2">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
   <view class="flex-col section_3 space-y-34">
 
     <swiper class="flex-col justify-start items-center main-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}"
@@ -63,7 +64,7 @@
                 class="image_7"
                 src="/images/functionIcon/5.png"
         />
-        <text class="font_2">今日天气</text>
+        <text class="font_2">VR全景</text>
       </view>
       <view class="flex-col items-center grid-item space-y-9" bindtap="toSceneRec">
         <image
@@ -72,19 +73,19 @@
         />
         <text class="font_2">景点识别</text>
       </view>
-      <view class="flex-col items-center grid-item space-y-9" bindtap="toCustomisedFunc">
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toCultureStore">
         <image
                 class="image_7"
                 src="/images/functionIcon/7.png"
         />
-        <text class="font_2">特色功能</text>
+        <text class="font_2">文创商城</text>
       </view>
-      <view class="flex-col items-center grid-item space-y-9" bindtap="toSceneManager">
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toPoemCollection">
         <image
                 class="image_7"
                 src="/images/functionIcon/8.png"
         />
-        <text class="font_2">信息管理</text>
+        <text class="font_2">诗文荟萃</text>
       </view>
     </view>
   </view>

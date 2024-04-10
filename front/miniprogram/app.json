@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "MyNavigation": "/components/my-navigation"
+  },
   "pages": [
     "pages/tabFunction/tabFunction",
     "pages/tabSpace/tabSpace",
@@ -31,9 +34,12 @@
     "pages/personalDetail/personalDetail",
     "pages/about_update/about_update",
     "pages/about_intro/about_intro",
-    "pages/BBS/BBS"
+    "pages/BBS/BBS",
+    "pages/poemCollection/poemCollection",
+    "pages/cultureStore/cultureStore"
   ],
   "window": {
+    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#58adc2",
     "backgroundColor": "#F6F6F6",
@@ -41,6 +47,8 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#FFF",
+    "backgroundColor": "#B5271D",
     "list": [
       {
         "pagePath": "pages/tabFunction/tabFunction",

@@ -8,6 +8,7 @@ page {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
   'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+  background-color: #F3DAD9;
 }
 
 view,
@@ -123,7 +124,7 @@ text {
 }
 .section_3 {
   padding: 26rpx 0 11rpx;
-  background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 0%, #ffffff 93.4%, #ffffff00 100%, #ffffff00 100%);
+  /* background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 0%, #ffffff 93.4%, #ffffff00 100%, #ffffff00 100%); */
 }
 .space-y-34 > view:not(:first-child),
 .space-y-34 > text:not(:first-child),
@@ -150,7 +151,7 @@ text {
   height: 344rpx;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: rgba(243, 248, 196, 0.76);
+  /* background: rgba(243, 248, 196, 0.76); */
   width: 95vw;
   border-radius: 10rpx;
 }
@@ -207,10 +208,13 @@ text {
   font-weight: 500;
   color: #000000;
 }
+
+/* 这一块需要把背景改成图片，或者是在图片上放内容 ，我先简单改了下*/
 .text-wrapper {
   padding: 6rpx 0;
-  background-color: #ed77000f;
-  border-radius: 22.5rpx;
+  /* background-color: #ed77000f; */
+  background-color: #F2D9A2;
+  border-radius: 5rpx;
   width: 158rpx;
 }
 .font_4 {
@@ -235,7 +239,8 @@ text {
 .space-x-24{
   width: 95vw;
   margin-left: -1vw;
-  background: #e6ffda;
+  /* background: #e6ffda; */
+  background-color: #FCEDD7;
 }
 .topBanner{
   width: 100%;

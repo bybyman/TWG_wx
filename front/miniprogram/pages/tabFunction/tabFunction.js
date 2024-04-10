@@ -3,6 +3,7 @@ const app = getApp()
 Page({
     data: {
         server: app.globalData.currentServer,
+        defaultData: {"title": "滕王阁景区智慧导览","back": "none"}
     },
     toSceneRec: function () {
         wx.navigateTo({
@@ -14,31 +15,19 @@ Page({
             url: '../map/map',
         })
     },
-    toSceneManager: function () {
-        if(!app.checkLogin()){
-            return
-        }
-        let user = wx.getStorageSync('userInfo')
-        if(user.role != 'admin'){
-            wx.showToast({
-                title: '您不是管理员!!!',
-                icon: 'none',
-                duration: 2000
-            })
-            return;
-        }
-        wx.navigateTo({
-            url: '../sceneManager/sceneManager',
-        })
+    toPoemCollection: function(){
+      wx.navigateTo({
+        url: '/pages/poemCollection/poemCollection',
+      })
     },
     toWeather: function () {
         wx.switchTab({
             url: '../tabSpace/tabSpace',
         })
     },
-    toCustomisedFunc: function () {
+    toCultureStore: function () {
         wx.navigateTo({
-            url: '/pages/AIGen/index/index'
+            url: '/pages/cultureStore/cultureStore'
         })
     },
     toSceneList: function () {

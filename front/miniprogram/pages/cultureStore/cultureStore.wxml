@@ -1,0 +1,79 @@
+<!--pages/cultureStore/cultureStore.wxml-->
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <!-- 搜索组件 -->
+  <view class="search-container">
+    <view class="search-left">
+      <image src="../../images/search.png" />
+      <input type="text" placeholder="搜索"/>
+    </view>
+    <view class="search-right">
+      <image src="../../images/add.png" />
+    </view>
+  </view>
+  <!-- 搜索下方导航栏 -->
+  <view>
+    <scroll-view class="major" scroll-x>   
+      <navigator class="box" url="/pages/about_intro/about_intro">
+        <image class="pic" src="/images/personal/mess.png"/>
+        <view class="txt">我的订单</view>
+      </navigator>
+      <navigator class="box" url="/pages/tabMain/tabMain" bindtap="checks">
+        <image class="pic" src="/images/personal/personal.png"/>
+        <view class="txt">购物车</view>
+      </navigator>
+      <navigator class="box" url="/pages/about_update/about_update" bindtap="toSceneManager">
+        <image class="pic" src="/images/personal/bang.png"/>
+        <view class="txt">卡券</view>
+      </navigator>
+      <navigator class="box" url="/pages/about_update/about_update">
+        <image class="pic" src="/images/personal/bang.png"/>
+        <view class="txt">关注店铺</view>
+      </navigator>
+      <navigator class="box" url="/pages/about_update/about_update">
+        <image class="pic" src="/images/personal/bang.png"/>
+        <view class="txt">浏览店铺</view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="goods-list">
+    <view class="good">
+      <image src="/images/personal/th.jpg" mode=""/>
+      <view class="title">琼楼锦鲤系列 | 原创图</view>
+      <view class="tag">
+        <text>极速退款</text>
+        <text>七天无理由退货</text>
+        <text>包邮</text>
+      </view>
+    </view>
+    <view class="good">
+      <image src="/images/personal/th.jpg" mode=""/>
+      <view class="title">琼楼锦鲤系列 | 原创图</view>
+      <view class="tag">
+        <text>极速退款</text>
+        <text>七天无理由退货</text>
+        <text>包邮</text>
+      </view>
+    </view>
+    <view class="good">
+      <image src="/images/personal/th.jpg" mode=""/>
+      <view class="title">琼楼锦鲤系列 | 原创图</view>
+      <view class="tag">
+        <text>极速退款</text>
+        <text>七天无理由退货</text>
+        <text>包邮</text>
+      </view>
+    </view>
+    <view class="good">
+      <image src="/images/personal/th.jpg" mode=""/>
+      <view class="title">琼楼锦鲤系列 | 原创图</view>
+      <view class="tag">
+        <text>极速退款</text>
+        <text>七天无理由退货</text>
+        <text>包邮</text>
+      </view>
+    </view>
+  </view>
+
+</view>

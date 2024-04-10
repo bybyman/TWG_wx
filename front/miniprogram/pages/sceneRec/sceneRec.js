@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
     data: {
+        defaultData: {"title": "景点识别"},
         imgPath: '/images/recogDefault.png',
         nowImPath: '/images/recogDefault.png',
         scene: {},

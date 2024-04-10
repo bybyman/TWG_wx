@@ -19,6 +19,7 @@ Page({
         dateFormat: '',
         timeFormat: '',
         wApiKey: '68f216a0793a449b9e4c8f857d4c5849',
+        defaultData: {"title": "滕王阁景区智慧导览","back": "none"}
     },
     getCityLatLon: function (city) {
         const that = this;

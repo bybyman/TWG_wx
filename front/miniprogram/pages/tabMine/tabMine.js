@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        defaultData: {"title": "个人中心","back": "none"},
         coverTransform: 'translateY(0)',
         coveTransition: '',
         userInfo: {},
@@ -46,6 +47,23 @@ Page({
                     })
                 }
             }
+        })
+    },
+    toSceneManager: function () {
+        if(!app.checkLogin()){
+            return
+        }
+        let user = wx.getStorageSync('userInfo')
+        if(user.role != 'admin'){
+            wx.showToast({
+                title: '您不是管理员!!!',
+                icon: 'none',
+                duration: 2000
+            })
+            return;
+        }
+        wx.navigateTo({
+            url: '../sceneManager/sceneManager',
         })
     },
     toLogout() {
