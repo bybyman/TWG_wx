@@ -1,0 +1,33 @@
+/* pages/about_intro/about_intro.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-container {
+    margin: 20px 5px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.image-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,31 @@
+<!--pages/Introduction/Introduction.wxml-->
+<view>
+    <view class="container">
+        <view class="title" style="font-weight: bold">JXNU导航咨询系统</view>
+        <view class="content">
+            <view class="content-item">
+                <view class="content-item-title" style="font-weight: bold">功能介绍</view>
+                <view class="content-item-content" style="color: #ED2E67; font-weight: bold">本应用主要分为信息维护，信息检索和特色功能三个主要模块。其中信息维护分为景点信息管理，用户信息管理和评论信息管理。信息检索分为热门景点评论,景点地图检索和导游路线规划。
+                    特色功能分为景点识别，图像编辑工具集，景点AI风格转化,景点描述AI生成和用户交流。
+                </view>
+                <view class="content-item-title" style="font-weight: bold">功能模块</view>
+                <view class="content-item-content" style="color: #ED2E67; font-weight: bold">信息维护模块主要是对景点信息，用户信息和评论信息的增删改查。
+
+                </view>
+                <view class="content-item-content" style="color: #ED2E67; font-weight: bold">
+                    信息检索最主要的是景点地图的检索，可以通过输入景点名称来获取景点的位置与详细信息，导游路线规划则为用户提供了两种解决方案，即时间和空间需求，用户可根据自己的需要来选择合适的观光路线。
+                </view>
+                <view class="content-item-content" style="color: #ED2E67; font-weight: bold">
+                    特色功能主要模块是景点识别和AI模块。景点识别可通过导入景点的一张图片来获知该景点的详细信息，AI模块主要是通过ChatGPT4大模型来对景点的图片进行风格转化和景点描述的生成。
+                </view>
+            </view>
+
+        </view>
+    </view>
+    <view class="container2">
+
+    </view>
+    <view class="container3">
+
+    </view>
+</view>

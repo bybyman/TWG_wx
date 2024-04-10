@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "得意黑 斜体";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/aoOTENm4OpZG.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/aTWZSI4qEMvC/BSvJZ1Ybvafs.woff") format("woff");
+  font-display: swap;
+}
+page {
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+  background-color: #F3DAD9;
+}
+
+view,
+image,
+text {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.relative {
+  position: relative;
+}
+.group_2 {
+  overflow-y: auto;
+}
+.section_3 {
+  padding: 26rpx 0 11rpx;
+  /* background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 0%, #ffffff 93.4%, #ffffff00 100%, #ffffff00 100%); */
+}
+.space-y-34 > view:not(:first-child),
+.space-y-34 > text:not(:first-child),
+.space-y-34 > image:not(:first-child) {
+  margin-top: 34rpx;
+}
+.image-wrapper_2 {
+  /*margin: 100 30rpx;*/
+  /* padding: 0 0 22rpx; */
+  border-radius: 16rpx;
+  /* background-image: url('https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16245811986179778941.png'); */
+  /* background-size: 100% 100%;
+  background-repeat: no-repeat; */
+  /* overflow: hidden; */
+}
+.image_6 {
+  /* object-fit: cover; */
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  margin-left: 2.5vw;
+  padding: 0 14rpx;
+  height: 344rpx;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* background: rgba(243, 248, 196, 0.76); */
+  width: 95vw;
+  border-radius: 10rpx;
+}
+.grid-item {
+  padding: 12rpx 0 15rpx;
+}
+.space-y-9 > view:not(:first-child),
+.space-y-9 > text:not(:first-child),
+.space-y-9 > image:not(:first-child) {
+  margin-top: 9rpx;
+}
+.image_7 {
+  border-radius: 50%;
+  width: 96rpx;
+  height: 96rpx;
+}
+.font_2 {
+  font-size: 28rpx;
+  font-family: 得意黑, sans-serif;
+  line-height: 40rpx;
+  color: #000000;
+}
+.group_3 {
+  padding: 36rpx 30rpx 24rpx;
+}
+.space-y-20 > view:not(:first-child),
+.space-y-20 > text:not(:first-child),
+.space-y-20 > image:not(:first-child) {
+  margin-top: 20rpx;
+}
+.section_4 {
+  padding: 22rpx 20rpx 18rpx;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+}
+.space-x-24 > view:not(:first-child),
+.space-x-24 > text:not(:first-child),
+.space-x-24 > image:not(:first-child) {
+  margin-left: 24rpx;
+}
+.image_8 {
+  width: 141rpx;
+  height: 141rpx;
+}
+.space-y-39 > view:not(:first-child),
+.space-y-39 > text:not(:first-child),
+.space-y-39 > image:not(:first-child) {
+  margin-top: 39rpx;
+}
+.font_3 {
+  font-size: 30rpx;
+  font-family: 得意黑, sans-serif;
+  line-height: 42rpx;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* 这一块需要把背景改成图片，或者是在图片上放内容 ，我先简单改了下*/
+.text-wrapper {
+  padding: 6rpx 0;
+  /* background-color: #ed77000f; */
+  background-color: #F2D9A2;
+  border-radius: 5rpx;
+  width: 158rpx;
+}
+.font_4 {
+  font-size: 24rpx;
+  font-family: 'PingFangSC-Regular';
+  line-height: 33rpx;
+  color: #ed7700;
+}
+.main-swiper {
+  height: 35vh;
+  margin-left: 2.5vw;
+  width: 95vw;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.space-y-20{
+  /*width: 95vw;*/
+  /*margin-left: 2.5vw;*/
+  /*background: #c3e7da;*/
+  border-radius: 20rpx;
+}
+.space-x-24{
+  width: 95vw;
+  margin-left: -1vw;
+  /* background: #e6ffda; */
+  background-color: #FCEDD7;
+}
+.topBanner{
+  width: 100%;
+  height: 3vh;
+  padding-left: 4vw;
+  background: orangered;
+  font-size: 26rpx;
+  color: beige;
+}
+.zan-dialog__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0);   /*设置阴影半透明背景如： background: rgba(0, 0, 0, 0.4);*/
+    display: none;
+}
+
+.zan-dialog__container {
+    position: fixed;
+    bottom: 300rpx;
+    width: 650rpx;    /*弹窗布局宽*/
+    height: 300rpx;   /*弹窗布局高，与下面弹出距离transform有关*/
+    margin-left: 50rpx;
+    background: orangered;
+    transform: translateY(300%);  /*弹框弹出距离，与弹框布局高度有关，如300%表示弹起距离为3倍弹窗高度 */
+    transition: all 0.4s ease;
+    z-index: 12;
+    border-radius: 20rpx;
+    box-shadow: 0px 3px 3px 2px gainsboro;  /*弹框的悬浮阴影效果，如不需要可注释该行*/
+}
+
+.zan-dialog--show .zan-dialog__container {
+    transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+    display: block;
+}
+.zan-title{
+    position: relative;
+    display: flex;
+    width: 22.5vw;
+    background: rgba(84, 182, 211, 0.77);
+    color: beige;
+    font-family: 得意黑, sans-serif;
+    border-radius: 20rpx;
+    font-size: 50rpx;
+    top: -2.5vh;
+    left: 3vw;
+}
+.video-bitle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    background: rgba(84, 182, 211, 0.77);
+    color: beige;
+    font-family: 得意黑, sans-serif;
+    border-radius: 20rpx;
+    font-size: 50rpx;
+    /*top: -2.5vh;*/
+    left: 3vw;
+}
+.zan-dialog__content{
+    display: flex;
+    flex-direction: column;
+    font-size: 50rpx;
+}
+.zan-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20rpx;
+}
+.zan-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30rpx;
+}
+.zan-alarm-title{
+    background: rgba(245, 245, 220, 0.4);
+    border-radius: 10rpx;
+    height: 5vh;
+    padding: 8rpx;
+    font-family: 得意黑, sans-serif;
+}

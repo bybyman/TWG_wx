@@ -1,0 +1,29 @@
+<!--pages/Introduction/Introduction.wxml-->
+<view>
+    <view class="container">
+<!--        标题加粗-->
+        <view class="title" style="font-weight: bold">JXNU导航咨询系统</view>
+        <view class="content">
+        <view class="content-item">
+            <view class="content-item-title" style="font-weight: bold">应用简介</view>
+            <view class="content-item-content" style="color: #ED2E67; font-weight: bold">本应用由吴斌、李泽康、王彦凌、吴贻顺、赵文强、骆骏共同开发完成，集娱乐、探索、导航功能于一体，具有创新性的意义。其主要面向在校大学生，为其提供了一个娱乐、探索、导航的平台，让大学生在学习之余，能够更好的放松自己，同时也能够更好的了解学校的各种信息，为大学生的学习生活提供便利。
+            </view>
+            <view class="content-item-content" style="color: #ED2E67; font-weight: bold">本应用基于前端架构与后端架构搭建而成。前端架构采取微信小程序框架进行设计，以wxml为基础，设计了良好的UI界面。后端架构使用云服务器进行数据存储，借助flask框架支撑python核心代码的运行，并处理前端发送的请求。
+            </view>
+            <view class="content-item-title" style="font-weight: bold">联系方式</view>
+            <view class="content-item-content" style="color: #ED2E67; font-weight: bold">QQ:2545401673
+            </view>
+            <view class="content-item-content" style="color: #ED2E67; font-weight: bold">微信:17375686535
+            </view>
+            <view class="content-item-content" style="color: #ED2E67; font-weight: bold">邮箱:a2545401673@outlook.com
+            </view>
+        </view>
+
+        </view>
+    </view>
+    <view class="container2">
+    </view>
+    <view class="container3">
+
+    </view>
+</view>

@@ -1,0 +1,66 @@
+<view class="shopping-flex-col page">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+    <view class="shopping-flex-col group_5 space-y-72">
+        <view class="shopping-flex-col space-y-30">
+            <image
+                    class="image_7"
+                    src="{{nowImPath}}"
+            />
+            <view class="shopping-flex-col group_7" style="display: {{displayMain}}">
+                <view class="shopping-flex-col group_8 space-y-16">
+                    <view class="shopping-flex-col shopping-items-start space-y-9">
+                        <text class="font_2 text_5">{{sceneName}}</text>
+                        <view class="shopping-flex-col shopping-items-center text-wrapper"><text class="text_6">{{sceneRole}}</text></view>
+                    </view>
+                    <text class="font_3 text_7">
+                        {{sceneDesc}}
+                    </text>
+                </view>
+                <view class="shopping-flex-col shopping-items-start group_10 space-y-10">
+                    <text class="font_3">地点简称</text>
+                    <text class="font_4">{{sceneSName}}</text>
+                </view>
+                <view class="shopping-flex-col shopping-items-start group_11 space-y-10">
+                    <text class="font_3">所在学院</text>
+                    <text class="font_4">{{sceneAcademy}}</text>
+                </view>
+                <view class="shopping-flex-col shopping-items-start group_12 space-y-10">
+                    <text class="font_3">街道信息</text>
+                    <text class="font_4">{{sceneMInfo}}</text>
+                </view>
+                <view class="shopping-flex-col shopping-items-start group_15 space-y-10">
+                    <text class="font_3">景点类型</text>
+                    <text class="font_4">{{sceneComment}}</text>
+                </view>
+                <view class="shopping-flex-col group_16 space-y-10">
+                    <text class="font_3 text_19">赞过该景点</text>
+                    <view class="shopping-flex-row space-x-19">
+                        <image
+                                class="image_8"
+                                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16238398704508364419.png"
+                        />
+                        <image
+                                class="image_8"
+                                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16238398704547021528.png"
+                        />
+                        <image
+                                class="image_8"
+                                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16238398704527172282.png"
+                        />
+                        <image
+                                class="image_8"
+                                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16238398713342640214.png"
+                        />
+                        <image
+                                class="image_8"
+                                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/5eedc9543259190011441867/60c3218d6d32e90012f09dc8/16238398713870859467.png"
+                        />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="shopping-flex-col shopping-items-end section_4" bindtap="onButton">
+            <view class="shopping-flex-col shopping-items-center text-wrapper_2"><text class="text_20">{{buttonName}}</text></view>
+        </view>
+    </view>
+</view>

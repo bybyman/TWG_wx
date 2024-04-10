@@ -1,0 +1,17 @@
+<!--pages/about_update/about_update.wxml-->
+
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="container">
+    <view class="header">
+        <text class="version">当前版本：<text class="number">v{{currentVersion}}</text></text>
+        <text class="version">最新版本：<text class="number">v{{latestVersion}}</text></text>
+    </view>
+    <view class="divider"></view>
+    <view class="content">
+        <text class="info" wx:if="{{currentVersion == latestVersion}}">您的软件已经是最新版本</text>
+        <button class="button" bindtap="doUpdate" wx:else>更新</button>
+    </view>
+  </view>
+</view>
+

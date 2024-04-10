@@ -1,0 +1,44 @@
+.button-container {
+  display: flex;
+  flex-direction: column-reverse; /* 修改这里 */
+  align-items: center;
+  justify-content: flex-end; /* 修改这里 */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1 { background-color: #1e90ff; }
+.button2 { background-color: #2e8b57; }
+.button3 { background-color: #ff4500; }
+.button4 { background-color: #ff1493; }
+.button5 { background-color: #8a2be2; }
+.button6 { background-color: #daa520; }
+
+.button:hover {
+  opacity: 0.8;
+}
+
+image {
+  width: 80%;
+  height: 40vh;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* 添加这行 */
+}

@@ -1,0 +1,66 @@
+<view class="sm-flex-col page">
+    <view class="sm-flex-col sm-flex-1 group_2">
+        <view class="sm-flex-col sm-justify-start sm-self-stretch sm-relative section" style="background-image: url({{imgPrefix + scene.Id + '.jpg'}})">
+            <view class="section_2"></view>
+            <text class="font pos_3">Id: {{scene.Id}}</text>
+            <text class="font_2 pos_4">点击以</text>
+            <text class="font_2 pos_5">更改图片</text>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">路线名称</text>
+                <text class="font text_6 ml-83">占位表单</text>
+            </view>
+            <view class="sm-mt-18 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Name}}" bindinput="changeName"></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{}}" bindinput=""></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_4">
+            <text class="sm-self-start font text_3">路线描述</text>
+            <view class="sm-flex-col sm-justify-start sm-items-start input text-wrapper mt-17">
+                <textarea class="font_3 text_4" value="{{newScene.Description}}" bindinput="changeDescription"></textarea>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">路线距离(m)</text>
+                <text class="font text_6 ml-83">路线耗时(min)</text>
+            </view>
+            <view class="mt-6 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Distance}}" bindinput="changeRole" ></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.Time}}" bindinput="changeType"></input>
+                </view>
+            </view>
+        </view>
+        <view class="sm-flex-col sm-self-stretch group_6">
+            <view class="sm-flex-row group_7">
+                <text class="font">路线(id)</text>
+                <text class="font text_6 ml-83" style="margin-left: 300rpx">路线(名称)</text>
+            </view>
+            <view class="mt-6 sm-flex-row">
+                <view class="section_3 button">
+                    <input class="font_3 text_name" value="{{newScene.Route}}" bindinput="changeStreet" ></input>
+                </view>
+                <view class="section_3 button ml-13">
+                    <input class="font_3 text_name" value="{{newScene.RouteTrans}}"></input>
+                </view>
+            </view>
+        </view>
+<!--        <view class="sm-flex-col sm-self-stretch group_5">-->
+<!--            <text class="sm-self-start font text_5">Card Number</text>-->
+<!--            <view class="sm-mt-18 input button"></view>-->
+<!--        </view>-->
+        <view class="sm-flex-col sm-justify-start sm-items-center button_2 text-wrapper_2"  bindtap="onButtonSave">
+            <text class="font text_7">保存修改</text>
+        </view>
+        <text class="sm-self-center font_3 text_8" bindtap="onButtonRe">还原修改</text>
+    </view>
+</view>

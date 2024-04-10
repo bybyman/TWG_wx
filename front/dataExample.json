@@ -1,0 +1,47 @@
+{
+  "userInfo": {
+    "userId": "abc123",
+    "nickName": "xiaoming",
+    "avaterUrl": "https://exampleImg.com",
+    "bandData": [
+    {
+      "cordTime": "2023年5月4日 下午3点",
+      "alarmList": [
+        {
+          "title": "起床啦",
+          "time": "6:00",
+          "status": 1,
+          "repeat": "一二三四五",
+          "id": "0"
+        },
+        ...
+      ],
+      "temperature": "36.5",
+      "heartRate": "80",
+      "bloodPressure": [
+        "80",
+        "120"
+      ],
+      "isSlippingDown": "0",
+      "telephoneList": [
+        {
+          "name": "爸爸",
+          "phone": "12345678901",
+          "tips": "亲情号码1"
+        },
+        ...
+      ]
+    },
+    ...
+    ],
+    "chatData": [
+      {
+        "time": "2023年5月4日 下午3点",
+        "sendQuest": ["感冒了怎么办",...]
+        "suggest": ["多喝热水，多休息",...]
+      },
+      ...
+    ]
+  }
+
+}

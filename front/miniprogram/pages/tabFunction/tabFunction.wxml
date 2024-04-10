@@ -1,0 +1,114 @@
+<view class="flex-col flex-auto group_2">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="flex-col section_3 space-y-34">
+
+    <swiper class="flex-col justify-start items-center main-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}"
+            indicator-color="grey" indicator-active-color="#1296db">
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/1.jpg"}}'
+      /></swiper-item>
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/2.jpg"}}'
+      /></swiper-item>
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/3.jpg"}}'
+      /></swiper-item>
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/4.jpg"}}'
+      /></swiper-item>
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/5.jpg"}}'
+      /></swiper-item>
+      <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
+              class="image_6"
+              src='{{server+"/backend/images/carouselMap/6.jpg"}}'
+      /></swiper-item>
+
+    </swiper>
+    <view class="grid">
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toMap">
+        <image
+                class="image_7"
+                src="/images/functionIcon/1.png"
+        />
+        <text class="font_2">地图检索</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toSceneList">
+        <image
+                class="image_7"
+                src="/images/functionIcon/2.png"
+        />
+        <text class="font_2">景点信息</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toRouteList">
+        <image
+                class="image_7"
+                src="/images/functionIcon/3.png"
+        />
+        <text class="font_2">路线推荐</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toComment">
+        <image
+                class="image_7"
+                src="/images/functionIcon/4.png"
+        />
+        <text class="font_2">景点评论</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toWeather">
+        <image
+                class="image_7"
+                src="/images/functionIcon/5.png"
+        />
+        <text class="font_2">VR全景</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toSceneRec">
+        <image
+                class="image_7"
+                src="/images/functionIcon/6.png"
+        />
+        <text class="font_2">景点识别</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toCultureStore">
+        <image
+                class="image_7"
+                src="/images/functionIcon/7.png"
+        />
+        <text class="font_2">文创商城</text>
+      </view>
+      <view class="flex-col items-center grid-item space-y-9" bindtap="toPoemCollection">
+        <image
+                class="image_7"
+                src="/images/functionIcon/8.png"
+        />
+        <text class="font_2">诗文荟萃</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex-col group_3 space-y-20" >
+    <view class="flex-row items-center section_4 space-x-24">
+      <image
+              class="image_8"
+              src="/images/shuoming.png"
+      />
+      <view class="flex-col items-start flex-auto space-y-39" bindtap="toIntro">
+        <text class="font_3">江西师范大学导游咨询系统</text>
+        <view class="flex-col justify-start items-center text-wrapper"><text class="font_4">应用介绍</text></view>
+      </view>
+    </view>
+    <view class="flex-row items-center section_4 space-x-24">
+      <image
+              class="image_8"
+              src="/images/jieshao.png"
+      />
+      <view class="flex-col items-start flex-auto space-y-39" bindtap="toAbout">
+        <text class="font_3">关于此应用</text>
+        <view class="flex-col justify-start items-center text-wrapper"><text class="font_4">功能简介</text></view>
+      </view>
+    </view>
+  </view>
+</view>

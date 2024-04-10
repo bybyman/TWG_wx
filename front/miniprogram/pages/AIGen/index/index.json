@@ -1,0 +1,9 @@
+{
+      "usingComponents": {
+
+      },
+      "navigationBarBackgroundColor": "#f8af9c",
+      "backgroundTextStyle": "light",
+      "navigationBarTitleText": "AI-Generater",
+      "navigationBarTextStyle": "black"
+}

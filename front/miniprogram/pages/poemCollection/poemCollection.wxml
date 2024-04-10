@@ -1,0 +1,56 @@
+<!--pages/poemCollection/poemCollection.wxml-->
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="main">
+    <view class="poem">
+    <image src="/images/background-poem.png" mode=""/>
+        <view class="poem-left">
+          <view class="poem-title">《滕王阁序》</view>
+          <view class="poem-author">作者：唐朝王勃</view>
+        </view>
+        <view class="poem-right">
+            查看原文
+        </view>
+    </view>
+    <view class="poem">
+    <image src="/images/background-poem.png" mode=""/>
+        <view class="poem-left">
+          <view class="poem-title">《滕王阁序》</view>
+          <view class="poem-author">作者：唐朝王勃</view>
+        </view>
+        <view class="poem-right">
+            查看原文
+        </view>
+    </view>
+    <view class="poem">
+    <image src="/images/background-poem.png" mode=""/>
+        <view class="poem-left">
+          <view class="poem-title">《滕王阁序》</view>
+          <view class="poem-author">作者：唐朝王勃</view>
+        </view>
+        <view class="poem-right">
+            查看原文
+        </view>
+    </view>
+    <view class="poem">
+    <image src="/images/background-poem.png" mode=""/>
+        <view class="poem-left">
+          <view class="poem-title">《滕王阁序》</view>
+          <view class="poem-author">作者：唐朝王勃</view>
+        </view>
+        <view class="poem-right">
+            查看原文
+        </view>
+    </view>
+    <view class="poem">
+    <image src="/images/background-poem.png" mode=""/>
+        <view class="poem-left">
+          <view class="poem-title">《滕王阁序》</view>
+          <view class="poem-author">作者：唐朝王勃</view>
+        </view>
+        <view class="poem-right">
+            查看原文
+        </view>
+    </view>
+  </view>
+</view>

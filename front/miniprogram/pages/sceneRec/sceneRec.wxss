@@ -1,0 +1,264 @@
+/************************************************************
+** 请将全局样式拷贝到项目的全局 CSS 文件或者当前页面的顶部 **
+** 否则页面将无法正常显示                                  **
+************************************************************/
+
+page {
+    width: 100vw;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+}
+
+view,
+image,
+text {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.shopping-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.shopping-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-justify-start {
+    justify-content: flex-start;
+}
+
+.shopping-justify-end {
+    justify-content: flex-end;
+}
+
+.shopping-justify-center {
+    justify-content: center;
+}
+
+.shopping-justify-between {
+    justify-content: space-between;
+}
+
+.shopping-justify-around {
+    justify-content: space-around;
+}
+
+.shopping-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.shopping-items-start {
+    align-items: flex-start;
+}
+
+.shopping-items-end {
+    align-items: flex-end;
+}
+
+.shopping-items-center {
+    align-items: center;
+}
+
+.shopping-items-baseline {
+    align-items: baseline;
+}
+
+.shopping-items-stretch {
+    align-items: stretch;
+}
+
+.shopping-self-start {
+    align-self: flex-start;
+}
+
+.shopping-self-end {
+    align-self: flex-end;
+}
+
+.shopping-self-center {
+    align-self: center;
+}
+
+.shopping-self-baseline {
+    align-self: baseline;
+}
+
+.shopping-self-stretch {
+    align-self: stretch;
+}
+
+.shopping-flex-1 {
+    flex: 1 1 0%;
+}
+
+.shopping-flex-auto {
+    flex: 1 1 auto;
+}
+
+.shopping-grow {
+    flex-grow: 1;
+}
+
+.shopping-grow-0 {
+    flex-grow: 0;
+}
+
+.shopping-shrink {
+    flex-shrink: 1;
+}
+
+.shopping-shrink-0 {
+    flex-shrink: 0;
+}
+
+.shopping-relative {
+    position: relative;
+}
+.page {
+    /* background-color: #ffffff; */
+    background-color: #F3DAD8;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+.font_2 {
+    font-size: 36rpx;
+    font-family: 'PingFangSC-Medium';
+    font-weight: 500;
+    color: #000000;
+}
+.group_5 {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+.space-y-72 > view:not(:first-child),
+.space-y-72 > text:not(:first-child),
+.space-y-72 > image:not(:first-child) {
+    margin-top: 72rpx;
+}
+.space-y-30 > view:not(:first-child),
+.space-y-30 > text:not(:first-child),
+.space-y-30 > image:not(:first-child) {
+    margin-top: 30rpx;
+}
+.image_7 {
+    width: 750rpx;
+    height: 330rpx;
+}
+.group_7 {
+    padding: 0 30rpx;
+}
+.group_8 {
+    margin-right: 18rpx;
+}
+.space-y-16 > view:not(:first-child),
+.space-y-16 > text:not(:first-child),
+.space-y-16 > image:not(:first-child) {
+    margin-top: 16rpx;
+}
+.space-y-9 > view:not(:first-child),
+.space-y-9 > text:not(:first-child),
+.space-y-9 > image:not(:first-child) {
+    margin-top: 9rpx;
+}
+.text_5 {
+    line-height: 50rpx;
+}
+.text-wrapper {
+    padding: 2rpx 0 4rpx;
+    border-radius: 18rpx;
+    width: 96rpx;
+    border: solid 1rpx #328cfb;
+}
+.text_6 {
+    color: #328cfb;
+    font-size: 20rpx;
+    font-family: 'PingFangSC-Regular';
+    line-height: 28rpx;
+}
+.font_3 {
+    font-size: 24rpx;
+    font-family: 'PingFangSC-Regular';
+    line-height: 33rpx;
+    color: #999999;
+}
+.text_7 {
+    color: #666666;
+    line-height: 38.5rpx;
+    text-align: left;
+}
+.group_10 {
+    margin-top: 53rpx;
+}
+.font_4 {
+    font-size: 24rpx;
+    font-family: 'PingFangSC-Regular';
+    line-height: 33rpx;
+    color: #000000;
+}
+.group_11 {
+    margin-top: 40rpx;
+}
+.group_12 {
+    margin-top: 40rpx;
+}
+.group_13 {
+    margin-top: 40rpx;
+}
+.text_14 {
+    align-self: flex-start;
+}
+.space-x-24 > view:not(:first-child),
+.space-x-24 > text:not(:first-child),
+.space-x-24 > image:not(:first-child) {
+    margin-left: 24rpx;
+}
+.group_15 {
+    margin-top: 40rpx;
+}
+.group_16 {
+    margin-top: 40rpx;
+}
+.space-y-10 > view:not(:first-child),
+.space-y-10 > text:not(:first-child),
+.space-y-10 > image:not(:first-child) {
+    margin-top: 10rpx;
+}
+.text_19 {
+    align-self: flex-start;
+}
+.space-x-19 > view:not(:first-child),
+.space-x-19 > text:not(:first-child),
+.space-x-19 > image:not(:first-child) {
+    margin-left: 19rpx;
+}
+.image_8 {
+    border-radius: 50%;
+    width: 70rpx;
+    height: 70rpx;
+}
+.section_4 {
+    padding: 20rpx 0;
+    /* background-color: #ffffff; */
+    box-shadow: 0px -1rpx 12rpx 0px #023a6d12;
+}
+.text-wrapper_2 {
+    margin-right: 30rpx;
+    padding: 20rpx 0;
+    /* background-color: #328cfb; */
+    background-color: #CD3737;
+    border-radius: 20rpx;
+    width: 240rpx;
+}
+.text_20 {
+    color: #ffffff;
+    font-size: 36rpx;
+    font-family: 'PingFangSC-Medium';
+    font-weight: 500;
+    line-height: 50rpx;
+}

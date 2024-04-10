@@ -1,0 +1,6 @@
+<!--pages/page/button1/page.wxml-->
+<view class="button">
+  <button class="button button1" bindtap="saveImage">保存图片</button>
+</view>
+
+<image src="{{imageUrl}}" style="width: 300px; height: 200px; position: absolute; right: 15%; top: 40%; transform: translateY(-50%);"></image>

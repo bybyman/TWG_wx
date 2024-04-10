@@ -1,0 +1,1 @@
+"E:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-7go4ua0t2f84cb40 --n quickstartFunctions --r --project "C:\Users\王晓娟\Desktop\微信小程序\HealthBand" --report_first --report

@@ -1,0 +1,130 @@
+<view class="sl-flex-col sl-flex-1 group">
+    <view class="sl-flex-col group_2">
+        <view class="sl-flex-row sl-justify-between sl-items-center group_4">
+            <text class="font_2 text_3">热门路线</text>
+            <view class="sl-flex-row sl-items-center group_5">
+                <text class="font_3 text_4">特色路线</text>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-between group_6 view" bindtap="switchCata">
+            <view class="sl-flex-row sl-items-center button_2" data-theme="learn" bindtap="switchCata">
+                <image
+                        class="sl-shrink-0 image_6"
+                        src="/images/FOREST.png"
+                />
+                <text class="font text_5 ml-7">学习专线</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_2" data-theme="sport" bindtap="switchCata">
+                <image
+                        class="sl-shrink-0 image_6"
+                        src="/images/MOUNTAIN.png"
+                />
+                <text class="font text_5 ml-7">运动休闲</text>
+            </view>
+            <view class="sl-flex-row sl-items-center button_3" data-theme="fun" bindtap="switchCata">
+                <image
+                        class="sl-shrink-0 image_7"
+                        src="/images/WATERFALL.png"
+                />
+                <text class="font text_6 ml-7">吃喝玩乐</text>
+            </view>
+        </view>
+        <view class="sl-flex-row group_6 view_2">
+            <view class="sl-ml-12 sl-flex-col sl-flex-1 section"  wx:for="{{cataRoutes}}" wx:key="index"
+                  style="background-image: url({{imagePrefix + item.Id + '.jpg'}})" data-route="{{item}}" bindtap="toRouteDetail">
+                <view class="sl-flex-col section_3">
+                    <view class="sl-flex-row sl-justify-between sl-items-center">
+                        <text class="font_4 text_7">{{item.Name}}</text>
+                        <text class="font_4 text_8">起点：{{item.RouteTrans[0]}}</text>
+                    </view>
+                    <view class="sl-mt-6 sl-flex-row sl-justify-between">
+                        <view class="sl-flex-row">
+                            <image
+                                    class="sl-shrink-0 image_8"
+                                    src="/images/mapIcon/wos.png"
+                            />
+                            <text class="font_5 text_10 ml-5">{{item.Time}}min, {{item.Distance}}m</text>
+                        </view>
+                        <text class="font_5 text_11">终点：{{item.RouteTrans[1]}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-between sl-items-center group_7">
+            <text class="font_2">路线筛选</text>
+<!--            <view class="sl-flex-row sl-items-center group_8">-->
+<!--                <text class="font_3 text_13 shrink-font">点击以查看详情</text>-->
+<!--            </view>-->
+            <view class="sl-flex-row sl-justify-end group_6">
+                <view class="sl-flex-row sl-items-center button_2 button_blue" bindtap="switchCurShowName">
+                    <text class="font text_5">时间筛选</text>
+                </view>
+                <view class="sl-flex-row sl-items-center button_2 button_blue" bindtap="switchCurShowName">
+                    <text class="font text_5">距离筛选</text>
+                </view>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-end group_6" wx:if="{{currentShow.name=='time'}}">
+            <view class="sl-flex-col sl-items-center button_2" data-rval1="0" data-rval2="30" bindtap="switchRange">
+                <text class="font text_5">浅游一下</text>
+                <text class="text_tiip">半小时内</text>
+            </view>
+            <view class="sl-flex-col sl-items-center button_2" data-rval1="30" data-rval2="240" bindtap="switchRange">
+                <text class="font text_5">闲暇时光</text>
+                <text class="text_tiip">半小时~四小时</text>
+            </view>
+            <view class="sl-flex-col sl-items-center button_2" data-rval1="240" data-rval2="720" bindtap="switchRange">
+                <text class="font text_5">假日畅享</text>
+                <text class="text_tiip">四小时以上</text>
+            </view>
+        </view>
+        <view class="sl-flex-row sl-justify-end group_6" wx:elif="{{currentShow.name=='distance'}}">
+            <view class="sl-flex-col sl-items-center button_2"  data-rval1="0" data-rval2="800" bindtap="switchRange">
+                <text class="font text_5">浅游一下</text>
+                <text class="text_tiip">八百米以内</text>
+            </view>
+            <view class="sl-flex-col sl-items-center button_2"  data-rval1="800" data-rval2="2000" bindtap="switchRange">
+                <text class="font text_5">深度畅游</text>
+                <text class="text_tiip">八百米~两公里</text>
+            </view>
+            <view class="sl-flex-col sl-items-center button_2"  data-rval1="2000" data-rval2="16000" bindtap="switchRange">
+                <text class="font text_5">无疆行者</text>
+                <text class="text_tiip">两公里以上</text>
+            </view>
+        </view>
+        <view class="sl-flex-col group_9">
+            <view class="sl-flex-col sl-items-start sl-self-stretch list">
+                <view
+                        class="sl-flex-row sl-items-center sl-mt-12 group_10 list-item"
+                        wx:for="{{routeShow}}"
+                        wx:for-item="item"
+                        wx:for-index="index"
+                        wx:key="index"
+                        data-route="{{item}}"
+                        bindtap="toRouteDetail"
+                >
+                    <image
+                            class="sl-shrink-0 image_9"
+                            src="{{imagePrefix + item.Id + '.jpg'}}"
+                    />
+                    <view class="sl-ml-14 sl-flex-col sl-flex-1">
+                        <text class="sl-self-start font_6 text_14">{{item.Name}}</text>
+                        <view class="sl-flex-row sl-items-center sl-self-stretch group_11">
+                            <image  class="image_10"
+                                    src="/images/mapIcon/wos.png"
+                            />
+                            <text class="sl-ml-4 font_7">{{item.RouteTrans}}</text>
+                        </view>
+                        <view class="sl-self-stretch group_12">
+                            <text class="font_8 text_15">
+                                {{item.Description}}
+                            </text>
+                            <text class="font_9 text_16">{{item.Time}}min,{{item.Distance}}m</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="sl-shrink-0 sl-relative section_5"></view>
+</view>

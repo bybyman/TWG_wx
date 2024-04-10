@@ -1,0 +1,685 @@
+/************************************************************
+** 请将全局样式拷贝到项目的全局 CSS 文件或者当前页面的顶部 **
+** 否则页面将无法正常显示                                  **
+************************************************************/
+
+page {
+    width: 100vw;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+}
+
+view,
+image,
+text {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.sd-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.sd-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.sd-justify-start {
+    justify-content: flex-start;
+}
+
+.sd-justify-end {
+    justify-content: flex-end;
+}
+
+.sd-justify-center {
+    justify-content: center;
+}
+
+.sd-justify-between {
+    justify-content: space-between;
+}
+
+.sd-justify-around {
+    justify-content: space-around;
+}
+
+.sd-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.sd-items-start {
+    align-items: flex-start;
+}
+
+.sd-items-end {
+    align-items: flex-end;
+}
+
+.sd-items-center {
+    align-items: center;
+}
+
+.sd-items-baseline {
+    align-items: baseline;
+}
+
+.sd-items-stretch {
+    align-items: stretch;
+}
+
+.sd-self-start {
+    align-self: flex-start;
+}
+
+.sd-self-end {
+    align-self: flex-end;
+}
+
+.sd-self-center {
+    align-self: center;
+}
+
+.sd-self-baseline {
+    align-self: baseline;
+}
+
+.sd-self-stretch {
+    align-self: stretch;
+}
+
+.sd-flex-1 {
+    flex: 1 1 0%;
+}
+
+.sd-flex-auto {
+    flex: 1 1 auto;
+}
+
+.sd-grow {
+    flex-grow: 1;
+}
+
+.sd-grow-0 {
+    flex-grow: 0;
+}
+
+.sd-shrink {
+    flex-shrink: 1;
+}
+
+.sd-shrink-0 {
+    flex-shrink: 0;
+}
+
+.sd-relative {
+    position: relative;
+}
+
+.sd-ml-2 {
+    margin-left: 4rpx;
+}
+
+.sd-mt-2 {
+    margin-top: 4rpx;
+}
+
+.sd-ml-4 {
+    margin-left: 8rpx;
+}
+
+.sd-mt-4 {
+    margin-top: 8rpx;
+}
+
+.sd-ml-6 {
+    margin-left: 12rpx;
+}
+
+.sd-mt-6 {
+    margin-top: 12rpx;
+}
+
+.sd-ml-8 {
+    margin-left: 16rpx;
+}
+
+.sd-mt-8 {
+    margin-top: 16rpx;
+}
+
+.sd-ml-10 {
+    margin-left: 20rpx;
+}
+
+.sd-mt-10 {
+    margin-top: 20rpx;
+}
+
+.sd-ml-12 {
+    margin-left: 24rpx;
+}
+
+.sd-mt-12 {
+    margin-top: 24rpx;
+}
+
+.sd-ml-14 {
+    margin-left: 28rpx;
+}
+
+.sd-mt-14 {
+    margin-top: 28rpx;
+}
+
+.sd-ml-16 {
+    margin-left: 32rpx;
+}
+
+.sd-mt-16 {
+    margin-top: 32rpx;
+}
+
+.sd-ml-18 {
+    margin-left: 36rpx;
+}
+
+.sd-mt-18 {
+    margin-top: 36rpx;
+}
+
+.sd-ml-20 {
+    margin-left: 40rpx;
+}
+
+.sd-mt-20 {
+    margin-top: 40rpx;
+}
+
+.sd-ml-22 {
+    margin-left: 44rpx;
+}
+
+.sd-mt-22 {
+    margin-top: 44rpx;
+}
+
+.sd-ml-24 {
+    margin-left: 48rpx;
+}
+
+.sd-mt-24 {
+    margin-top: 48rpx;
+}
+
+.sd-ml-26 {
+    margin-left: 52rpx;
+}
+
+.sd-mt-26 {
+    margin-top: 52rpx;
+}
+
+.sd-ml-28 {
+    margin-left: 56rpx;
+}
+
+.sd-mt-28 {
+    margin-top: 56rpx;
+}
+
+.sd-ml-30 {
+    margin-left: 60rpx;
+}
+
+.sd-mt-30 {
+    margin-top: 60rpx;
+}
+
+.sd-ml-32 {
+    margin-left: 64rpx;
+}
+
+.sd-mt-32 {
+    margin-top: 64rpx;
+}
+
+.sd-ml-34 {
+    margin-left: 68rpx;
+}
+
+.sd-mt-34 {
+    margin-top: 68rpx;
+}
+
+.sd-ml-36 {
+    margin-left: 72rpx;
+}
+
+.sd-mt-36 {
+    margin-top: 72rpx;
+}
+
+.sd-ml-38 {
+    margin-left: 76rpx;
+}
+
+.sd-mt-38 {
+    margin-top: 76rpx;
+}
+
+.sd-ml-40 {
+    margin-left: 80rpx;
+}
+
+.sd-mt-40 {
+    margin-top: 80rpx;
+}
+
+.sd-ml-42 {
+    margin-left: 84rpx;
+}
+
+.sd-mt-42 {
+    margin-top: 84rpx;
+}
+
+.sd-ml-44 {
+    margin-left: 88rpx;
+}
+
+.sd-mt-44 {
+    margin-top: 88rpx;
+}
+
+.sd-ml-46 {
+    margin-left: 92rpx;
+}
+
+.sd-mt-46 {
+    margin-top: 92rpx;
+}
+
+.sd-ml-48 {
+    margin-left: 96rpx;
+}
+
+.sd-mt-48 {
+    margin-top: 96rpx;
+}
+
+.sd-ml-50 {
+    margin-left: 100rpx;
+}
+
+.sd-mt-50 {
+    margin-top: 100rpx;
+}
+
+.sd-ml-52 {
+    margin-left: 104rpx;
+}
+
+.sd-mt-52 {
+    margin-top: 104rpx;
+}
+
+.sd-ml-54 {
+    margin-left: 108rpx;
+}
+
+.sd-mt-54 {
+    margin-top: 108rpx;
+}
+
+.sd-ml-56 {
+    margin-left: 112rpx;
+}
+
+.sd-mt-56 {
+    margin-top: 112rpx;
+}
+
+.sd-ml-58 {
+    margin-left: 116rpx;
+}
+
+.sd-mt-58 {
+    margin-top: 116rpx;
+}
+
+.sd-ml-60 {
+    margin-left: 120rpx;
+}
+
+.sd-mt-60 {
+    margin-top: 120rpx;
+}
+
+.sd-ml-62 {
+    margin-left: 124rpx;
+}
+
+.sd-mt-62 {
+    margin-top: 124rpx;
+}
+
+.sd-ml-64 {
+    margin-left: 128rpx;
+}
+
+.sd-mt-64 {
+    margin-top: 128rpx;
+}
+
+.sd-ml-66 {
+    margin-left: 132rpx;
+}
+
+.sd-mt-66 {
+    margin-top: 132rpx;
+}
+
+.sd-ml-68 {
+    margin-left: 136rpx;
+}
+
+.sd-mt-68 {
+    margin-top: 136rpx;
+}
+
+.sd-ml-70 {
+    margin-left: 140rpx;
+}
+
+.sd-mt-70 {
+    margin-top: 140rpx;
+}
+
+.sd-ml-72 {
+    margin-left: 144rpx;
+}
+
+.sd-mt-72 {
+    margin-top: 144rpx;
+}
+
+.sd-ml-74 {
+    margin-left: 148rpx;
+}
+
+.sd-mt-74 {
+    margin-top: 148rpx;
+}
+
+.sd-ml-76 {
+    margin-left: 152rpx;
+}
+
+.sd-mt-76 {
+    margin-top: 152rpx;
+}
+
+.sd-ml-78 {
+    margin-left: 156rpx;
+}
+
+.sd-mt-78 {
+    margin-top: 156rpx;
+}
+
+.sd-ml-80 {
+    margin-left: 160rpx;
+}
+
+.sd-mt-80 {
+    margin-top: 160rpx;
+}
+
+.sd-ml-82 {
+    margin-left: 164rpx;
+}
+
+.sd-mt-82 {
+    margin-top: 164rpx;
+}
+
+.sd-ml-84 {
+    margin-left: 168rpx;
+}
+
+.sd-mt-84 {
+    margin-top: 168rpx;
+}
+
+.sd-ml-86 {
+    margin-left: 172rpx;
+}
+
+.sd-mt-86 {
+    margin-top: 172rpx;
+}
+
+.sd-ml-88 {
+    margin-left: 176rpx;
+}
+
+.sd-mt-88 {
+    margin-top: 176rpx;
+}
+
+.sd-ml-90 {
+    margin-left: 180rpx;
+}
+
+.sd-mt-90 {
+    margin-top: 180rpx;
+}
+
+.sd-ml-92 {
+    margin-left: 184rpx;
+}
+
+.sd-mt-92 {
+    margin-top: 184rpx;
+}
+
+.sd-ml-94 {
+    margin-left: 188rpx;
+}
+
+.sd-mt-94 {
+    margin-top: 188rpx;
+}
+
+.sd-ml-96 {
+    margin-left: 192rpx;
+}
+
+.sd-mt-96 {
+    margin-top: 192rpx;
+}
+
+.sd-ml-98 {
+    margin-left: 196rpx;
+}
+
+.sd-mt-98 {
+    margin-top: 196rpx;
+}
+
+.sd-ml-100 {
+    margin-left: 200rpx;
+}
+
+.sd-mt-100 {
+    margin-top: 200rpx;
+}
+.mt-13 {
+    margin-top: 26rpx;
+}
+.mt-15 {
+    margin-top: 30rpx;
+}
+.page {
+    background-color: #f6f6f6;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.section {
+    padding: 140rpx 56rpx 584rpx;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.image {
+    width: 52rpx;
+    height: 52rpx;
+}
+.image_2 {
+    margin-right: 6rpx;
+    box-shadow: 0rpx 6.88rpx 5.5rpx #00000005, 0rpx 17.38rpx 13.9rpx #00000008, 0rpx 35.44rpx 28.36rpx #0000000a,
+    0rpx 73rpx 58.4rpx #0000000d, 0rpx 200rpx 160rpx #00000012;
+    border-radius: 50%;
+    width: 54rpx;
+    height: 54rpx;
+}
+.section_2 {
+    margin-top: -42rpx;
+    padding: 55.16rpx 0 50rpx;
+    background-color: #ffffff;
+    border-radius: 70rpx 70rpx 0 0;
+}
+.group {
+    padding: 0 55.32rpx;
+}
+.font {
+    font-size: 36rpx;
+    font-family: Poppins;
+    line-height: 38.98rpx;
+}
+.text {
+    margin-left: 4.92rpx;
+    color: #121212;
+    font-weight: 700;
+    line-height: 38.42rpx;
+}
+.image_3 {
+    width: 36rpx;
+    height: 46rpx;
+}
+.font_2 {
+    font-size: 24rpx;
+    font-family: Poppins;
+}
+.text_2 {
+    color: #6f7789;
+    line-height: 24.5rpx;
+}
+.font_3 {
+    font-size: 28rpx;
+    font-family: Poppins;
+    line-height: 20.98rpx;
+    color: #6f7789;
+}
+.text_3 {
+    font-weight: 600;
+    line-height: 21.26rpx;
+}
+.image_4 {
+    width: 24rpx;
+    height: 22rpx;
+}
+.group_2 {
+    margin-top: 20.28rpx;
+    padding-bottom: 53.98rpx;
+}
+.group_3 {
+    padding: 53.98rpx 52.92rpx 33.74rpx;
+}
+.text_4 {
+    margin-left: 8rpx;
+    margin-right: 6rpx;
+}
+.text-wrapper {
+    margin-left: 67.24rpx;
+}
+.text_5 {
+    line-height: 21.56rpx;
+}
+.text-wrapper_2 {
+    margin-left: 62rpx;
+}
+.text_6 {
+    margin-left: 10rpx;
+    margin-right: 8rpx;
+}
+.text-wrapper_3 {
+    margin-left: 54.46rpx;
+}
+.text_7 {
+    margin-left: 10rpx;
+    margin-right: 8rpx;
+    line-height: 21.56rpx;
+}
+.divider {
+    background-color: #6f778937;
+}
+.section_3 {
+    background-color: #f36d72;
+    border-radius: 6rpx;
+    width: 92rpx;
+    height: 4rpx;
+}
+.group_4 {
+    padding-left: 58.58rpx;
+    padding-right: 48.7rpx;
+}
+.text_8 {
+    color: #121212;
+    font-size: 30rpx;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 32rpx;
+}
+.text_time{
+    color: #3a8aea;
+    font-size: 20rpx;
+    font-family: Poppins;
+    font-weight: 300;
+    line-height: 15rpx;
+}
+.group_5 {
+    line-height: 28rpx;
+}
+.text_9 {
+    color: #6f7789;
+    font-size: 24rpx;
+    font-family: Poppins;
+    font-weight: 300;
+    line-height: 28rpx;
+    text-align: justify;
+}
+.text_10 {
+    margin-left: 9.58rpx;
+    color: #f36d72;
+    line-height: 28rpx;
+}
+.button {
+    margin-right: 9.3rpx;
+}
+.text-wrapper_4 {
+    padding: 30.66rpx 0 26.36rpx;
+    background-color: #f36d72;
+    border-radius: 30rpx;
+}
+.text_11 {
+    color: #ffffff;
+    font-weight: 800;
+}
