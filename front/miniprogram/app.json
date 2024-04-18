@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "MyNavigation": "/components/my-navigation"
+    "MyNavigation": "/components/my-navigation/my-navigation",
+    "custom-content": "/components/content/content"
   },
   "pages": [
     "pages/tabFunction/tabFunction",
@@ -36,7 +37,8 @@
     "pages/about_intro/about_intro",
     "pages/BBS/BBS",
     "pages/poemCollection/poemCollection",
-    "pages/cultureStore/cultureStore"
+    "pages/cultureStore/cultureStore",
+    "pages/BBS-detail/BBS-detail"
   ],
   "window": {
     "navigationStyle": "custom",

@@ -1,3 +1,4 @@
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
 <view class="mapMain-flex-col mapMain-justify-start mapMain-relative page">
     <map class="mainMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" polyline="{{polyline}}"
          id="map" markers="{{markers}}" show-location bindtap="handleMapTapMain"></map>

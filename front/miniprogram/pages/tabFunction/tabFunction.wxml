@@ -89,26 +89,29 @@
       </view>
     </view>
   </view>
-  <view class="flex-col group_3 space-y-20" >
+  <view style="position: relative;">
+    <image src="/images/index-background.png" class="index-background"/>
+    <view class="flex-col group_3 space-y-20" >
     <view class="flex-row items-center section_4 space-x-24">
-      <image
-              class="image_8"
-              src="/images/shuoming.png"
-      />
+      <image class="image_8" src="/images/shuoming.png"/>
       <view class="flex-col items-start flex-auto space-y-39" bindtap="toIntro">
         <text class="font_3">江西师范大学导游咨询系统</text>
-        <view class="flex-col justify-start items-center text-wrapper"><text class="font_4">应用介绍</text></view>
+        <view class="flex-col justify-start items-center text-wrapper">
+          <image src="/images/text-background.png" class="text-background" mode=""/>
+          <text class="font_4">应用介绍</text>
+        </view>
       </view>
     </view>
     <view class="flex-row items-center section_4 space-x-24">
-      <image
-              class="image_8"
-              src="/images/jieshao.png"
-      />
-      <view class="flex-col items-start flex-auto space-y-39" bindtap="toAbout">
-        <text class="font_3">关于此应用</text>
-        <view class="flex-col justify-start items-center text-wrapper"><text class="font_4">功能简介</text></view>
-      </view>
+      <image class="image_8" src="/images/jieshao.png"/>
+        <view class="flex-col items-start flex-auto space-y-39" bindtap="toAbout">
+          <text class="font_3">关于此应用</text>
+          <view class="flex-col justify-start items-center text-wrapper">
+            <image src="/images/text-background.png" class="text-background" mode=""/>
+            <text class="font_4">功能简介</text>
+          </view>
+        </view>
     </view>
+  </view>
   </view>
 </view>

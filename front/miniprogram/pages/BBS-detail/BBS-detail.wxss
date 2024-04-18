@@ -1,0 +1,61 @@
+page{
+  background: #F3DAD9;
+}
+
+.view-comment{
+  padding: 10rpx 10rpx;
+  width: 710rpx;
+}
+.comment{
+  padding: 10rpx 15rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+.comment-title{
+  position: relative;
+}
+.comment-title-text{
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.icon-share{
+  position: absolute;
+  right: 15%;
+}
+.icon-share image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.icon-more{
+  position: absolute;
+  right: 5%;
+}
+.icon-more image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.comment-author{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.comment-author-imagebox{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 10rpx;
+}
+.comment-author-imagebox image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.comment-date{
+  position: absolute;
+  right: 5%;
+}

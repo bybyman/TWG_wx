@@ -1,0 +1,75 @@
+.content {
+  width: 630rpx;
+  padding: 0 30rpx;
+  border-top: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+}
+
+.contentInner {
+  width: 630rpx;
+  color: #2f3033;
+  font-size: 30rpx;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+.hideArea {
+  display: -webkit-box;
+  overflow: hidden;
+  position: fixed;
+  top: 100vh;
+  left: -100vw;
+}
+
+.foldInner {
+  width: 630rpx;
+  padding-top: 10rpx;
+}
+
+.foldInner .fold {
+  color: #6676bd;
+  font-size: 32rpx;
+  cursor: pointer;
+}
+.text-clamp1{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.text-clamp2{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.text-clamp3{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.text-clamp4{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.text-clamp5{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}

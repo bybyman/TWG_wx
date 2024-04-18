@@ -1,86 +1,73 @@
-<view class="sm-flex-col page">
-    <view class="sm-flex-col section">
-        <view class="sm-flex-col sm-justify-start sm-items-start sm-self-start divider">
-            <view class="sm-shrink-0 section_2"></view>
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="overall">
+    <view class="publish-comment">
+      <view class="input">
+          <textarea auto-height="true" value="" placeholder="晒图分享你的旅途吧~好的评论会优先被看到哦~"/>
+      </view>
+      <view class="opreation">
+        <!-- 上传 S -->
+        <view class="img-list">
+        <!-- 上传列表 -->
+        <view class="upload-video">
+          <block wx:if="{{src != ''}}">
+            <video src="{{src}}" class="img-li"></video>
+            <image class="icon-deletes" src="/images/BBS/delete.jpg" bindtap="deleteVideo"></image>
+          </block>
         </view>
-        <view class="sm-flex-row sm-items-center sm-self-stretch group_4">
-            <image
-                    class="image_7"
-                    src="{{avatarUrl}}"
-            />
-            <textarea class="sm-ml-8 font text_5" placeholder="快来发表你的想法吧！" bindinput="onContent">{{content}}</textarea>
+        <block wx:for="{{imgList}}" wx:key="index">
+          <view class="img-li">
+            <view class="img-li" bindtap="previewImg">
+              <image class="uploading-icon" src="{{item}}"></image>
+            </view>
+            <image class="icon-delete" src="/images/BBS/delete.jpg" bindtap="deleteImg"></image>
+          </view>
+        </block>
+        <!-- 上传图片/视频 S -->
+        <view class="img-li" wx:if="{{imgList.length<=8}}" bindtap="actioncnt">
+          <image class="uploading-icon" src="/images/BBS/add.jpg"></image>
         </view>
-        <view class="sm-flex-row sm-items-end equal-division group_5">
-            <view class="sm-flex-row sm-items-center equal-division-item group_6">
-                <image
-                        class="image_10"
-                        src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=d96c9b825fc99584569769bc1cd1fa59.png"
-                />
-                <text class="font_2 ml-7" bindtap="onCancel">取消编辑</text>
-            </view>
-            <image
-                    class="image_8 horiz-divider"
-                    src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=c050c24c666af7c02fb5af09f447dce2.png"
-            />
-            <view class="sm-flex-row sm-justify-center sm-items-center equal-division-item_2 group_7">
-                <image
-                        class="image pos"
-                        src="{{imageUrl?imageUrl:'https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=0c1ca6fb3a03cd873852bfcbc9378975.png'}}"
-                />
-                <text class="font_2" bindtap="onAddImage">上传图片</text>
-            </view>
-            <image
-                    class="image_9 horiz-divider"
-                    src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=c050c24c666af7c02fb5af09f447dce2.png"
-            />
-            <view class="sm-flex-row sm-items-center image_9 group_8">
-                <image
-                        class="sm-shrink-0 image"
-                        src="https://ide.code.fun/api/image?token=658dacf941e4ed00112d296d&name=f9598373b24d3602a5edf7ecccaaf1c1.png"
-                />
-                <text class="sm-ml-6 font_2" bindtap="onConfirm">发表评论</text>
-            </view>
+        <!-- 上传图片/视频 E -->
+        <view class="buttonbox">
+          <button> 发布评论 </button>
         </view>
-        <view class="sm-shrink-0 sm-self-start divider_2"></view>
+        </view>
+        <!-- 上传 E -->
+      </view>
     </view>
-
-    <view class="sm-flex-col section_10 mt-9" wx:for="{{comments}}" wx:key="index">
-        <view class="sm-flex-row sm-justify-between sm-items-center">
-            <view class="sm-flex-row sm-items-center">
-                <view class="sm-flex-col sm-justify-start sm-items-center image-wrapper">
-                    <image
-                            class="image_12"
-                            src="{{item.user.avatarUrl}}"
-                    />
-                </view>
-                <view class="sm-flex-col ml-9">
-                    <text class="font_2 text_10">{{item.user.nickName}}</text>
-                    <view class="sm-mt-4 sm-flex-row sm-items-center">
-                        <text class="font_4 text_11">{{item.time}}</text>
-                        <image
-                                class="image ml-3"
-                                src="https://ide.code.fun/api/image?token=6584b2d9bddbb700118497cd&name=590e911b6cf828990e8cd4cbfd77b028.png"
-                        />
-                    </view>
-                </view>
-            </view>
-            <image
-                    class="image_13"
-                    src="https://ide.code.fun/api/image?token=6584b2d9bddbb700118497cd&name=e9375ecf2fb8dd765e746f54c4174f7a.png"
-            />
+    <view class="view-comment">
+        <view class="comment">
+          <view class="comment-title">
+            <span><text decode="true">&lt;</text></span>
+            <span class="comment-title-text">评价详情</span>
+            <span class="icon-share"><image src="/images/BBS/share.png" mode=""/></span>
+            <span class="icon-more" bindtap="goDetail"><image src="/images/BBS/more.png" mode=""/></span>
+          </view>
+          <view class="comment-author">
+            <span class="comment-author-imagebox"><image src="/images/BBS/head.jpg" mode=""/></span>
+            <span>滕王阁景区游客</span>
+            <span class="comment-date">2024/4/17</span>
+          </view>
+          <view class="comment-content">
+            <custom-content content="滕王阁，这座承载着深厚历史与文化底蕴的仿古建筑，坐落于四川省南充市阗中市境内，其独特的魅力与丰富的内涵吸引着无数游客前来探访。今天，我将为大家带来一篇关于滕王阁的点评推荐，让我们一起领略这座古建筑的独特魅力。滕王阁的历史沿革可谓悠久。唐调露元年（679年）,滕王李元婴任隆州（今四川阗中）刺史时，大修宫殿" maxline="5" position="left" foldable="true"></custom-content>
+          </view>
         </view>
-        <view class="sm-flex-col group_10 mt-15">
-            <view class="sm-self-start group_11">
-                <text class="font_3 text_13"></text>
-                <text class="text_12">
-                    {{item.content}}
-                </text>
-            </view>
-            <image
-                    class="sm-shrink-0 sm-self-stretch image_14"
-                    src="{{item.imageUrl}}"
-            />
-
+        <view class="comment">
+          <view class="comment-title">
+            <span><text decode="true">&lt;</text></span>
+            <span class="comment-title-text">评价详情</span>
+            <span class="icon-share"><image src="/images/BBS/share.png" mode=""/></span>
+            <span class="icon-more" bindtap="goDetail"><image src="/images/BBS/more.png" mode=""/></span>
+          </view>
+          <view class="comment-author">
+            <span class="comment-author-imagebox"><image src="/images/BBS/head.jpg" mode=""/></span>
+            <span>滕王阁景区游客</span>
+            <span class="comment-date">2024/4/17</span>
+          </view>
+          <view class="comment-content">
+            <custom-content content="滕王阁，这座承载着深厚历史与文化底蕴的仿古建筑，坐落于四川省南充市阗中市境内，其独特的魅力与丰富的内涵吸引着无数游客前来探访。今天，我将为大家带来一篇关于滕王阁的点评推荐，让我们一起领略这座古建筑的独特魅力。滕王阁的历史沿革可谓悠久。唐调露元年（679年）,滕王李元婴任隆州（今四川阗中）刺史时，大修宫殿" maxline="5" position="left" foldable="true"></custom-content>
+          </view>
         </view>
     </view>
+  </view>
 </view>

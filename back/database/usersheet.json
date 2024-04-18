@@ -1,0 +1,36 @@
+[
+    {
+        "avatarUrl": "http://121.41.99.200/backend/images/avatars/omoqz5FNXklM54YhYuDvJzpCF8Ok.jpg",
+        "birthday": "2023-12-24",
+        "gender": "男",
+        "nickName": "Clinomania",
+        "openid": "omoqz5FNXklM54YhYuDvJzpCF8Ok",
+        "region": [
+            "北京市",
+            "北京市",
+            "东城区"
+        ],
+        "role": "admin",
+        "signature": "如果这是最后的一页，在你离开之前，能否让我把故事重写"
+    },
+    {
+        "avatarUrl": "http://121.41.99.200/backend/images/avatars/omoqz5Gat2lLJ8cEJAi0IqG_G3ic.jpg",
+        "birthday": "2023-12-30",
+        "gender": "男",
+        "nickName": "firew",
+        "openid": "omoqz5Gat2lLJ8cEJAi0IqG_G3ic",
+        "region": [
+            "北京市",
+            "北京市",
+            "西城区"
+        ],
+        "role": "admin",
+        "signature": "187676"
+    },
+    {
+        "openid": "omoqz5PNM-FfFnoq36XwApE14xHA",
+        "nickName": "未设置姓名",
+        "role": "normal",
+        "avatarUrl": "http://121.41.99.200/backend/images/avatars/omoqz5PNM-FfFnoq36XwApE14xHA.jpg"
+    }
+]

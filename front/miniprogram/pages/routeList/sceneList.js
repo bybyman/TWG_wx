@@ -20,6 +20,7 @@ function getRouteByCata(routes, cata) {
 }
 Page({
     data: {
+        defaultData:{"title": "路线推荐"},
         routes: [],
         imagePrefix: `${app.globalData.currentServer}/backend/images/routes/`,
         cataRoutes: [],
@@ -27,7 +28,7 @@ Page({
         currentShow:{
             name: 'time',
             value: [0, 30],
-        }
+        },
     },
     onLoad: function (options) {
         let scenes = wx.getStorageSync('sceneData')

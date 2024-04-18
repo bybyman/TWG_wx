@@ -91,6 +91,7 @@ function buildRouteMarker(lon, lat, id, name) {
 }
 Page({
     data: {
+      defaultData:{"title": "地图检索"},
         longitude: 0,
         latitude: 0,
         scale: 15,

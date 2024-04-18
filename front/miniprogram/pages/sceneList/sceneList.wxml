@@ -1,4 +1,6 @@
-<view class="sl-flex-col sl-flex-1 group">
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view class="sl-flex-col sl-flex-1 group">
     <view class="sl-flex-col group_2">
         <view class="sl-flex-row sl-justify-between sl-items-center group_4">
             <text class="font_2 text_3">热门景点</text>
@@ -102,4 +104,5 @@
         </view>
     </view>
     <view class="sl-shrink-0 sl-relative section_5"></view>
+  </view>
 </view>

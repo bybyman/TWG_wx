@@ -213,15 +213,21 @@ text {
 .text-wrapper {
   padding: 6rpx 0;
   /* background-color: #ed77000f; */
-  background-color: #F2D9A2;
+  /* background-color: #F2D9A2; */
   border-radius: 5rpx;
   width: 158rpx;
+  position: relative;
 }
 .font_4 {
   font-size: 24rpx;
+  font-weight: bold;
   font-family: 'PingFangSC-Regular';
   line-height: 33rpx;
-  color: #ed7700;
+  /* color: #ed7700; */
+  color: #7F6000;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .main-swiper {
   height: 35vh;
@@ -333,4 +339,14 @@ text {
     height: 5vh;
     padding: 8rpx;
     font-family: 得意黑, sans-serif;
+}
+.index-background{
+  position: absolute;
+  width: 750rpx;
+  height: 500rpx;
+  left: 0;
+}
+.text-background{
+  width: 115rpx;
+  height: 55rpx;
 }

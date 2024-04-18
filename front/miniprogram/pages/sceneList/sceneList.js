@@ -8,7 +8,8 @@ Page({
     data: {
         scenes: [],
         imagePrefix: `${app.globalData.currentServer}/backend/images/scenes/`,
-        cataScenes: []
+        cataScenes: [],
+        defaultData:{"title": "景点信息"},
     },
 
     onLoad: function (options) {
