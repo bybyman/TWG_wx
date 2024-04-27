@@ -3,6 +3,19 @@ let QMWX = require('../../utils/qqmap-wx-jssdk.min.js');
 let qqmapsdk = new QMWX({
     key: 'B4YBZ-3LG3Q-KDA54-4LQIQ-7QUUH-FIFSP'
 });
+function isPointInPolygon(point, polygon) {
+    let x = point[0], y = point[1]
+    let inside = false
+    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+        let xi = polygon[i][0], yi = polygon[i][1];
+        let xj = polygon[j][0], yj = polygon[j][1];
+
+        let intersect = ((yi > y) !== (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+    return inside;
+}
 function getDistance(lat1, lon1, lat2, lon2) {
     const R = 6371; // 地球半径，单位为千米
     const dLat = (lat2 - lat1) * (Math.PI / 180);
@@ -91,10 +104,10 @@ function buildRouteMarker(lon, lat, id, name) {
 }
 Page({
     data: {
-      defaultData:{"title": "地图检索"},
-        longitude: 0,
-        latitude: 0,
-        scale: 15,
+        defaultData: {"title": "地图检索","back": "none"},
+        longitude: 115.88108357697297,
+        latitude: 28.681423286549734,
+        scale: 20,
         markers: [],
         showDetailCard: false,
         cardName: '',
@@ -131,16 +144,15 @@ Page({
                 console.log(res);
                 let longitude = res.longitude;
                 let latitude = res.latitude;
-                // if(longitude<116.025828||longitude>116.03823||latitude<28.6736||latitude>28.683916){
-                //     showOutRangeInfo()
-                //     longitude = 116.031509
-                //     latitude = 28.679199
-                //     longitude=116.035292
-                //     latitude=28.680551
-                // }
+                if(longitude<115.87702635135315||longitude>115.88420788735982||latitude<28.677756335938636||latitude>28.685748932064527){
+                    showOutRangeInfo()
+                }else {
+                    that.setData({
+                        longitude: longitude,
+                        latitude: latitude,
+                    });
+                }
                 that.setData({
-                    longitude: longitude,
-                    latitude: latitude,
                     markers: markers,
                 });
             },
@@ -150,7 +162,7 @@ Page({
         })
         if(app.globalData.jumpData.scene2map!=null){
             this.setData({
-                clickPos: [(app.globalData.jumpData.scene2map.Position.x[0]+app.globalData.jumpData.scene2map.Position.x[1])/2, (app.globalData.jumpData.scene2map.Position.y[0]+app.globalData.jumpData.scene2map.Position.y[1])/2]
+                clickPos: app.globalData.jumpData.scene2map.Center
             })
             this.dispSpecifcScene(app.globalData.jumpData.scene2map)
             this.goClick()
@@ -165,8 +177,8 @@ Page({
             let firstScene = that.data.scenes.find((scene) => scene.Id == route.Route[0])
             markers.push({
                 id: 11,
-                longitude: (firstScene.Position.x[0]+firstScene.Position.x[1])/2,
-                latitude: (firstScene.Position.y[0]+firstScene.Position.y[1])/2,
+                longitude: firstScene.Center[0],
+                latitude: firstScene.Center[1],
                 width: 15,
                 height: 25,
                 iconPath: '/images/MOUNTAIN.png',
@@ -176,10 +188,10 @@ Page({
                 console.log(fscene)
                 passScenes.push(fscene)
                 polypoints.push({
-                    longitude: (fscene.Position.x[0]+fscene.Position.x[1])/2,
-                    latitude: (fscene.Position.y[0]+fscene.Position.y[1])/2
+                    longitude: fscene.Center[0],
+                    latitude: fscene.Center[1]
                 })
-                markers.push(buildRouteMarker((fscene.Position.x[0]+fscene.Position.x[1])/2, (fscene.Position.y[0]+fscene.Position.y[1])/2, mid++, fscene.Name))
+                markers.push(buildRouteMarker(fscene.Center[0], fscene.Center[1], mid++, fscene.Name))
             })
             getRouteRecursive(polypoints, sfpolypoints, 0, that)
             this.setData({
@@ -233,7 +245,7 @@ Page({
     Pos2Arch: function (x, y){
         for (let i = 0; i < this.data.scenes.length; i++) {
             let scene = this.data.scenes[i];
-            if (scene.Position.x[0] <= x && x <= scene.Position.x[1] && scene.Position.y[0] <= y && y <= scene.Position.y[1]) {
+            if (isPointInPolygon([x, y], scene.Position)) {
                 return scene;
             }
         }
@@ -282,8 +294,8 @@ Page({
         let markers = this.data.markers;
         let newMarker = {
             id: markers.length,
-            longitude: (scene.Position.x[0]+scene.Position.x[1])/2,
-            latitude: (scene.Position.y[0]+scene.Position.y[1])/2,
+            longitude: scene.Center[0],
+            latitude: scene.Center[1],
             width: 15,
             height: 25,
             callout: {
