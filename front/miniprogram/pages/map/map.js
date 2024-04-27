@@ -104,10 +104,10 @@ function buildRouteMarker(lon, lat, id, name) {
 }
 Page({
     data: {
-        defaultData: {"title": "地图检索","back": "none"},
+        defaultData: {"title": "地图检索"},
         longitude: 115.88108357697297,
         latitude: 28.681423286549734,
-        scale: 20,
+        scale: 18,
         markers: [],
         showDetailCard: false,
         cardName: '',
@@ -131,7 +131,7 @@ Page({
         })
         function showOutRangeInfo() {
             wx.showToast({
-                title: '检测到您的定位不在学校范围内，已为您切换到学校中心位置',
+                title: '检测到您的不在景区周边，已为您切换到景区位置',
                 icon: 'none',
                 duration: 500,
             })
