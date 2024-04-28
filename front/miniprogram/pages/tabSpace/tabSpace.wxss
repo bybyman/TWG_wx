@@ -57,62 +57,63 @@
     font-family: Aa剑豪体, sans-serif;
 }
 .flex-row{
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
     display: flex;
     flex-direction: row;
     white-space: nowrap;
 }
 .group_2 {
-    padding: 2.133vw 4.267vw;
+    padding: 20rpx 35rpx;
 }
 .image_5 {
-    width: 6.4vw;
-    height: 6.4vw;
+    width: 60rpx;
+    height: 60rpx;
 }
 .image_search {
-    width: 6.4vw;
-    height: 6.4vw;
+    width: 60rpx;
+    height: 60rpx;
     margin-left: 60vw;
 }
 .space-y-64 > view:not(:first-child),
 .space-y-64 > text:not(:first-child),
 .space-y-64 > image:not(:first-child) {
-    margin-top: 17.067vw;
+    margin-top: 170rpx;
 }
 .section {
-    padding: 6vw 8vw 6.4vw;
+    padding: 50rpx 55rpx 55rpx;
     /* background-image: linear-gradient(112.7deg, #afc4fa 18.2%, #668ae6 84.9%); */
-    border-radius: 3.2vw;
-    box-shadow: 0 1.067vw 10.667vw #aab9e066;
+    border-radius: 30rpx;
+    box-shadow: 0 10rpx 100rpx #aab9e066;
 }
 .space-y-26 > view:not(:first-child),
 .space-y-26 > text:not(:first-child),
 .space-y-26 > image:not(:first-child) {
-    margin-top: 6.933vw;
+    margin-top: 5rpx;
 }
 .space-y-4 > view:not(:first-child),
 .space-y-4 > text:not(:first-child),
 .space-y-4 > image:not(:first-child) {
-    margin-top: 1.067vw;
+    margin-top: 8rpx;
 }
 .weather_icon {
-    width: 20vw;
-    height: 20vw;
+    width: 180rpx;
+    height: 180rpx;
+    margin-left: 45rpx;
 }
 .image_8 {
-    margin-right: 33.067vw;
-    width: 4.267vw;
-    height: 4.267vw;
+    margin-right: 250rpx;
+    width: 35rpx;
+    height: 35rpx;
 }
 .space-x-10 > view:not(:first-child),
 .space-x-10 > text:not(:first-child),
 .space-x-10 > image:not(:first-child) {
-    margin-left: 2.667vw;
+    margin-left: 30rpx;
 }
 .space-y-12 > view:not(:first-child),
 .space-y-12 > text:not(:first-child),
 .space-y-12 > image:not(:first-child) {
-    margin-top: 3.2vw;
+    margin-top: 30rpx;
 }
 .card-head{
     display: flex;
@@ -144,6 +145,7 @@
 }
 .punch{
   margin-top: 30rpx;
+  /* position: relative; */
 }
 
 .punch .card{
@@ -180,6 +182,13 @@
 .punch .card .punch-content .content{
   box-sizing: border-box;
   padding: 10rpx 0;
+}
+.daka{
+  position: absolute;
+  top: 640rpx;
+  height: 110rpx;
+  width: 280rpx;
+  margin-left: 20rpx;
 }
 
 

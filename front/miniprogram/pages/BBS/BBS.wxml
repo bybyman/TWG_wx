@@ -3,7 +3,7 @@
   <view class="overall">
     <view class="publish-comment">
       <view class="input">
-          <textarea auto-height="true" value="" placeholder="晒图分享你的旅途吧~好的评论会优先被看到哦~"/>
+          <textarea style="height: 200rpx;" bindinput="getContent" value="{{content}}" placeholder="晒图分享你的旅途吧~好的评论会优先被看到哦~"/>
       </view>
       <view class="opreation">
         <!-- 上传 S -->
@@ -29,13 +29,38 @@
         </view>
         <!-- 上传图片/视频 E -->
         <view class="buttonbox">
-          <button> 发布评论 </button>
+          <button bindtap="addComment"> 发布评论 </button>
         </view>
         </view>
         <!-- 上传 E -->
       </view>
     </view>
     <view class="view-comment">
+      <view class="comment" wx:for="{{listdata}}" wx:key="index">
+          <view class="comment-title">
+            <span><text decode="true">&nbsp;</text></span>
+            <span class="comment-title-text">评价详情</span>
+            <span class="icon-share"><image src="/images/BBS/share.png" mode=""/></span>
+            <span class="icon-more" data-item="{{item.comment.commentId}}" bindtap="goDetail"><image src="/images/BBS/more.png" mode=""/></span>
+          </view>
+          <view class="comment-author">
+            <span class="comment-author-imagebox"><image src="{{item.comment.avatarUrl}}" mode=""/></span>
+            <span>{{item.comment.username}}</span>
+            <span class="comment-date">{{item.comment.date}}</span>
+          </view>
+          <view class="comment-content">
+            <custom-content content="{{item.comment.content}}" maxline="5" position="left" foldable="true"></custom-content>
+          </view>
+          <view class="img-list">
+            <block wx:for="{{item.media}}" wx:key="index">
+            <view class="img-li">
+              <view class="img-li" bindtap="previewImg">
+                  <image class="uploading-icon" src="http://47.99.147.35:8081/images/{{item.url}}"></image>
+              </view>
+            </view>
+          </block>
+          </view>
+        </view>
         <view class="comment">
           <view class="comment-title">
             <span><text decode="true">&lt;</text></span>

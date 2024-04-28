@@ -18,45 +18,30 @@
                       <!-- <text></text> -->
                   </view>
                   <view class="weather-area flex-col items-start space-y-4">
-                      <image class="weather_icon" src="{{weatherIcon}}"/>
                       <view class="weather-text">
                           <text><text>{{weatherText}} </text><text>{{temperature}}℃ </text>| <text >湿度{{humidity}}%</text></text>
                           <text><text>{{windDirection}} </text>{{windSpeed}}级 <text >{{pressure}}千帕</text></text>
                       </view>
+                      <image class="weather_icon" src="../../images/wethericon.png"/>
                   </view>
                   <image class="self-end image_8"
-                        src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/644df59c5a7e3f0310442a0a/644df6f654fe0000115dfa30/16828311058595125490.png"
+                        src="../../images/refresh.png"
                         bindtap="onWRefresh"/>
                   <text class="tips-text">更新时间日期</text>
               </view>
           </view>
       </view>
       <view class="punch">
-          <view class="card">
+          <image class="daka" src="http://47.99.147.35:8081/images/hotDaka.png" alt=""/>
+          <view style="height: 20rpx;"></view>
+          <view class="card" wx:for="{{sceneData}}" wx:key="index" bindtap="goDetail"
+          data-id="{{index}}">
               <view class="punch-img">
-                <image src="/images/personal/th.jpg" alt=""/>
+                <image src="{{item.img}}" alt=""/>
               </view>
               <view class="punch-content">
-                  <view class="title">太极广场</view>
-                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
-              </view>
-          </view>
-          <view class="card">
-              <view class="punch-img">
-                <image src="/images/personal/th.jpg" alt=""/>
-              </view>
-              <view class="punch-content">
-                  <view class="title">太极广场</view>
-                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
-              </view>
-          </view>
-          <view class="card">
-              <view class="punch-img">
-                <image src="/images/personal/th.jpg" alt=""/>
-              </view>
-              <view class="punch-content">
-                  <view class="title">太极广场</view>
-                  <view class="content">太极广场，击鼓纳福，挥挥手打卡吧~</view>
+                  <view class="title">{{item.title}}</view>
+                  <view class="content">{{item.content}}</view>
               </view>
           </view>
       </view>

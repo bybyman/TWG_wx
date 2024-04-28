@@ -2,20 +2,22 @@
   <MyNavigation default-data="{{defaultData}}"></MyNavigation>
   <view class="view-comment">
         <view class="comment">
-          <!-- <view class="comment-title">
-            <span><text decode="true">&lt;</text></span>
-            <span class="comment-title-text">评价详情</span>
-            <span class="icon-share"><image src="/images/BBS/share.png" mode=""/></span>
-            <span class="icon-more"><image src="/images/BBS/more.png" mode=""/></span>
-          </view> -->
           <view class="comment-author">
-            <span class="comment-author-imagebox"><image src="/images/BBS/head.jpg" mode=""/></span>
-            <span>滕王阁景区游客</span>
-            <span class="comment-date">2024/4/17</span>
+            <span class="comment-author-imagebox"><image src="{{comment.avatarUrl}}" mode=""/></span>
+            <span>{{comment.username}}</span>
+            <span class="comment-date">{{comment.date}}</span>
           </view>
           <view class="comment-content">
-            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>滕王阁，这座承载着深厚历史与文化底蕴的仿古建筑，坐落于四川省南充市阗中市境内，其独特的魅力与丰富的内涵吸引着无数游客前来探访。今天，我将为大家带来一篇关于滕王阁的点评推荐，让我们一起领略这座古建筑的独特魅力。滕王阁的历史沿革可谓悠久。唐调露元年（679年）,滕王李元婴任隆州（今四川阗中）刺史时，大修宫殿
-            <!-- <custom-content content="滕王阁，这座承载着深厚历史与文化底蕴的仿古建筑，坐落于四川省南充市阗中市境内，其独特的魅力与丰富的内涵吸引着无数游客前来探访。今天，我将为大家带来一篇关于滕王阁的点评推荐，让我们一起领略这座古建筑的独特魅力。滕王阁的历史沿革可谓悠久。唐调露元年（679年）,滕王李元婴任隆州（今四川阗中）刺史时，大修宫殿" maxline="5" position="left" foldable="true"></custom-content> -->
+            <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>{{comment.content}}
+          </view>
+          <view class="img-list">
+            <block wx:for="{{media}}" wx:key="index">
+              <view class="img-li">
+                <view class="img-li" data-id="{{index}}" bindtap="previewImg">
+                  <image class="uploading-icon" src="http://47.99.147.35:8081/images/{{item.url}}"></image>
+                </view>
+              </view>
+            </block>
           </view>
         </view>
     </view>
