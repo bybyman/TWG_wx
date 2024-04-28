@@ -66,6 +66,7 @@ App({
           wx.setStorageSync('sceneData', res.data.data)
         },
         fail(res) {
+          console.log(that.globalData.currentServer)
           console.log(res)
         }
       })

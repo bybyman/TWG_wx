@@ -27,8 +27,7 @@ function getDistance(lat1, lon1, lat2, lon2) {
         Math.sin(dLon / 2) *
         Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distance = R * c * 1000;
-    return distance;
+    return R * c * 1000;
 }
 function getRouteRecursive(polypoints, sfpolypoints, i, that) {
     if (i < polypoints.length - 1) {
@@ -240,6 +239,7 @@ Page({
             markers: markers,
         })
         let scene = this.Pos2Arch(lon, lat);
+        console.log(scene)
         this.setCard(scene);
     },
     Pos2Arch: function (x, y){
@@ -255,7 +255,7 @@ Page({
         this.setData({
             cardName: scene.Name,
             cardPhoto: `${app.globalData.currentServer}/backend/images/scenes/${scene.Id}.jpg`,
-            destDist: getDistance(this.data.latitude, this.data.longitude, scene.Position.y[0], scene.Position.x[0]).toFixed(2)
+            destDist: getDistance(this.data.latitude, this.data.longitude, scene.Center[0], scene.Center[1]).toFixed(2)
         })
         this.setData({
             showDetailCard: true,

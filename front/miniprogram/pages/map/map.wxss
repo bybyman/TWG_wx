@@ -611,7 +611,7 @@ text {
     box-shadow: 0rpx 8rpx 40rpx #2020200f;
 }
 .pos_6 {
-    position: absolute;
+    position: fixed;
     left: 50rpx;
     bottom: 200rpx;
 }
@@ -668,7 +668,7 @@ text {
     width: 250rpx;
 }
 .pos_8 {
-    position: absolute;
+    position: fixed;
     left: 50rpx;
     bottom: 50rpx;
 }
@@ -681,7 +681,7 @@ text {
     height: 38rpx;
 }
 .button {
-    position: absolute;
+    position: fixed;
     right: 50rpx;
     bottom: 50rpx;
 }
