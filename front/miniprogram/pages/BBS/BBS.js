@@ -1,37 +1,102 @@
 const app = getApp();
 
+var util = require("../../utils/util")
+
 Page({
     data: {
+        info:"",
+        listdata:[],
+        uuid:"",
         content: "",
-        comment:{},
-        comments: [],
         avatarUrl: "",
         defaultData: {"title": "景点评论"},
         imgList: [],          // 上传列表
-        src: "",        // 上传视频
+        src: "",      // 上传视频
     },
     onLoad: function (options) {
-        let that = this;
+        this.getComment()
+    },
+    getComment:function(){
+      let that = this;
         wx.request({
-            url: app.globalData.currentServer + ":5000/getComment",
+            url: "http://47.99.147.35:8081/comment/getcomment",
             method: "GET",
             success: (res)=> {
-                console.log(res.data);
                 that.setData({
-                    comments: res.data.data
+                  listdata: res.data.data
                 })
             }
         })
-        if(wx.getStorageSync("userInfo")){
-            that.setData({
-                avatarUrl: wx.getStorageSync("userInfo").avatarUrl
-            })
-        }
-        console.log(that.data.avatarUrl);
     },
-    goDetail:function(){
+    getContent:function(e){
+      this.setData({
+        content:e.detail.value
+      })
+    },
+    addComment:function(){
+      if(wx.getStorageSync('openid') == ""){
+        wx.showModal({
+          title: '请先登录',
+          content: '前往登录页面？',
+          complete: (res) => {
+            if (res.cancel) {
+              return ;
+            }
+            if (res.confirm) {
+              wx.switchTab({
+                url: '/pages/tabMine/tabMine',
+              })
+              return ;
+            }
+          }
+        })
+      }
+      var that = this
+      var commentId = util.uuid()
+      this.setData({
+        uuid: commentId
+      })
+      wx.showLoading({
+        title: '评论发布中',
+      })
+      wx.request({
+        url: 'http://47.99.147.35:8081/comment/addcomment',
+        method: "post",
+        data:{
+          "commentId": commentId,
+          "openId": wx.getStorageSync('openid'),
+          "content": this.data.content,
+          "username":wx.getStorageSync('username'),
+          "avatarUrl":wx.getStorageSync('avatarUrl')
+        },
+        success:function(res){
+          for(var i = 0;i <= that.data.imgList.length;i++){
+            if(i == that.data.imgList.length){
+              setTimeout(function(){
+                that.getComment()
+                wx.hideLoading()
+                that.setData({
+                  content:"",
+                  imgList:[]
+                })
+              }, 1000)
+              return ;
+            }
+            wx.uploadFile({
+              url: 'http://47.99.147.35:8081/media/image',
+              filePath: that.data.imgList[i],
+              name:"file",
+              formData:{
+                "commentId": that.data.uuid
+              }
+            })
+          }
+        }
+      })
+    },
+    goDetail:function(e){
       wx.navigateTo({
-        url: '/pages/BBS-detail/BBS-detail',
+        url: '/pages/BBS-detail/BBS-detail?commentId=' + e.currentTarget.dataset.item,
       })
     },
     onContent: function (e) {
@@ -188,14 +253,14 @@ Page({
   actioncnt: function() {
     var _this = this;
     wx.showActionSheet({
-      itemList: ['图片', '视频'],
+      itemList: ['图片'],
       success: function(res) {
         if(res.tapIndex == 0) {
           _this.chooseSource()
         }
-        if(res.tapIndex == 1) {
-          _this.chooseVideo()
-        }
+        // if(res.tapIndex == 1) {
+        //   _this.chooseVideo()
+        // }
       },
       fail: function(res) {
         console.log(res.errMsg)
@@ -233,54 +298,5 @@ Page({
         console.log('接口调用失败')
       }
     })
-  },
-    onConfirm: function () {
-        if(!app.checkLogin()){
-            return
-        }
-        let that = this;
-        let comment = {
-            content: that.data.content,
-            time: new Date().toLocaleString(),
-            user: wx.getStorageSync("userInfo")
-
-        }
-        if(this.data.imageUrl){
-            comment.imageUrl = this.data.imageUrl;
-            this.setData({
-                imageUrl: ""
-            })
-        }
-        let comments = that.data.comments;
-        console.log(comments);
-        comments.unshift(comment);
-        that.setData({
-            comments: comments
-        })
-        wx.request({
-            url: app.globalData.currentServer + ":5000/postComment",
-            method: "POST",
-            data: comments,
-            success: (res)=> {
-                console.log(res.data);
-                that.setData({
-                    content: ""
-                })
-                wx.showToast({
-                    title: '评论成功',
-                    icon: 'success',
-                    duration: 2000
-                })
-                wx.request({
-                    url: app.globalData.currentServer + ":5000/getComment",
-                    method: "GET",
-                    success: (res)=> {
-                        that.setData({
-                            comments: res.data.data
-                        })
-                    }
-                })
-            }
-        })
-    }
+  }
 });

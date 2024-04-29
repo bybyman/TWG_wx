@@ -6,27 +6,27 @@
             indicator-color="grey" indicator-active-color="#1296db">
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/1.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-1.jpg'
       /></swiper-item>
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/2.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-2.jpg'
       /></swiper-item>
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/3.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-3.jpg'
       /></swiper-item>
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/4.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-4.jpg'
       /></swiper-item>
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/5.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-5.jpg'
       /></swiper-item>
       <swiper-item class="flex-col justify-start items-center image-wrapper_2"><image
               class="image_6"
-              src='{{server+"/backend/images/carouselMap/6.jpg"}}'
+              src='http://47.99.147.35:8081/images/swiper-6.jpg'
       /></swiper-item>
 
     </swiper>

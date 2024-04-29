@@ -38,7 +38,8 @@
     "pages/BBS/BBS",
     "pages/poemCollection/poemCollection",
     "pages/cultureStore/cultureStore",
-    "pages/BBS-detail/BBS-detail"
+    "pages/BBS-detail/BBS-detail",
+    "pages/Space-detail/Space-detail"
   ],
   "window": {
     "navigationStyle": "custom",

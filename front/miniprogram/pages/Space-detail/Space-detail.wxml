@@ -1,0 +1,30 @@
+<!--pages/Space-detail/Space-detail.wxml-->
+<view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+  <view>
+    <view class="imagebox">
+      <image src="{{img}}" mode=""/>
+    </view>
+    <view class="banner">
+      <view class="title">{{title}}</view>
+      <view class="location">
+        <image src="/images/locate-pink.png" mode=""/>
+        <view>{{locate}}</view>
+      </view>
+      <view class="camera">
+        <image src="/images/camera.png" mode=""/>
+        <view>这样打卡</view>
+      </view>
+      <view class="content">
+        <view class="input">
+          <textarea value="{{comment}}" placeholder="{{content}}"/>
+          <button class="publish">发布定位打卡</button>
+        </view>
+      </view>
+      <view class="foot">
+        <image src="/images/foot.png" mode=""/>
+        <view>已有8888人在此留下足迹</view>
+      </view>
+    </view>
+  </view>
+</view>

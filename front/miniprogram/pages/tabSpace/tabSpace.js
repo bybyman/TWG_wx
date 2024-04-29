@@ -4,6 +4,23 @@ const app = getApp()
 
 Page({
     data: {
+        sceneData:[
+          {
+            "img": "http://47.99.147.35:8081/images/taijisquare.jpg",
+            "title": "太极广场",
+            "content": "太极广场，击鼓纳福，挥挥手打卡吧~"
+          },
+          {
+            "img": "http://47.99.147.35:8081/images/goodwind.jpg",
+            "title": "好风徐来",
+            "content": "好风徐来，水波不兴，心随风动，风随心舞,比个耶打卡吧~"
+          },
+          {
+            "img": "http://47.99.147.35:8081/images/zhangjiang.jpg",
+            "title": "章江晓渡",
+            "content": "章江晓渡，一叶扁舟摇曳在晨曦的熹微之中，挥挥手打卡吧～"
+          },
+        ],
         province: '江西省',
         step: '0',
         city: '南昌市',
@@ -20,6 +37,11 @@ Page({
         timeFormat: '',
         wApiKey: '68f216a0793a449b9e4c8f857d4c5849',
         defaultData: {"title": "滕王阁景区智慧导览","back": "none"}
+    },
+    goDetail: function(e) {
+      wx.navigateTo({
+        url: '/pages/Space-detail/Space-detail?index=' + e.currentTarget.dataset.id,
+      })
     },
     getCityLatLon: function (city) {
         const that = this;

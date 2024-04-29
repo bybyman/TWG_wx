@@ -1,7 +1,7 @@
 <view class="personalContainer">
   <MyNavigation default-data="{{defaultData}}"></MyNavigation>
   <view class="user-section">
-    <image class="bg" src="{{backgroundUrl}}"></image>
+    <image class="bg" src="/images/personal/background.png"></image>
     <view class="user-info-box" bindtap="getUserInfo">
       <view class="portrait-box">
         <image class="portrait" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"/images/personal/missing-face.png"}}'></image>
@@ -14,11 +14,11 @@
 
 <view class="cover-container" style="transform: {{coverTransform}}; transition: {{coveTransition}}">
   <!-- 这里把这个图片变成这个色就行了 #F3DAD9 -->
-  <image class="arc" src="/images/personal/arc.png"></image>
+  <!-- <image class="arc" src="/images/personal/arc.png"></image> -->
   <!-- 个人中心导航 -->
   <scroll-view class="major" scroll-x>   
       <navigator class="box" url="/pages/about_intro/about_intro">
-        <image class="pic" src="/images/personal/mess.png"/>
+        <image class="pic" src="/images/personal/my-message.png"/>
         <view class="txt">我的消息</view>
       </navigator>
       <navigator class="box" url="/pages/tabMain/tabMain" bindtap="checks">
@@ -26,11 +26,11 @@
         <view class="txt">个人信息</view>
       </navigator>
       <navigator class="box" url="/pages/about_update/about_update" bindtap="toSceneManager">
-        <image class="pic" src="/images/personal/bang.png"/>
+        <image class="pic" src="/images/personal/manage.png"/>
         <view class="txt">信息管理</view>
       </navigator>
       <navigator class="box" url="/pages/about_update/about_update">
-        <image class="pic" src="/images/personal/bang.png"/>
+        <image class="pic" src="/images/personal/upgrade.png"/>
         <view class="txt">检查更新</view>
       </navigator>
 </scroll-view>
