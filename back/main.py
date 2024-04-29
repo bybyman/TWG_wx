@@ -16,9 +16,8 @@ import shutil
 
 app = Flask(__name__)
 
-classes = ['三食堂', '二食堂', '先骕楼', '名达楼', '图书馆', '天浪楼',
-           '实验大楼', '惟义楼', '方荫楼', '正大广场', '洁琼楼', '瑶湖体育场', '瑶湖体育馆',
-           '知行楼', '超真楼', '长胜体育场', '静湖', '音乐学院', '风雨球场', '风雨球馆']
+classes = ['古乐坊', '好风徐来', '起凤亭', '神风亭', '太极广场', '腾蛟亭',
+           '滕王阁', '滕王台', '压江亭', '挹翠亭', '悠然亭', '章江晓渡', '长天秋水']
 transform_test = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -64,7 +63,7 @@ def modifyUserData():
     print(userInfo)
     if data['avatar'] != '':
         img_data = base64.b64decode(data['avatar'])
-        with open('./images/avatars/' + userInfo['openid'] + '.jpg', 'wb') as fp:
+        with open('C:/upload/images/avatars/' + userInfo['openid'] + '.jpg', 'wb') as fp:
             fp.write(img_data)
     user = list(filter(lambda t: t['openid'] == userInfo['openid'], users))[0]
     print(user)
@@ -83,11 +82,10 @@ def onRecognition():
     # filePath = data['imgPath']
     img_data = base64.b64decode(data['imgPath'])
 
-    with open('./recog.jpg', 'wb') as fp:
+    with open('C:/upload/images/recog.jpg', 'wb') as fp:
         fp.write(img_data)
-    dataset_test = BuildingData('recog.jpg', transform_test, test=True)
+    dataset_test = BuildingData('C:/upload/images/recog.jpg', transform_test, test=True)
     res = -1
-    resu = -1
 
     for index in range(len(dataset_test)):
         item = dataset_test[index]
@@ -102,18 +100,7 @@ def onRecognition():
         # sys.stdout = classes[pred.data.item()]
         index += 1
 
-    labelmap = [{"三食堂": 72}, {"二食堂": 71}, {"先骕楼": 13}, {"名达楼": 15}, {"图书馆": 12}, {"天浪楼": 18},
-                {"实验大楼": 14}, {"惟义楼": 11}, {"方荫楼": 16}, {"正大广场": 27}, {"洁琼楼": 17}, {"瑶湖体育场": 23},
-                {"瑶湖体育馆": 24},
-                {"知行楼": 35}, {"超真楼": 34}, {"长胜体育场": 22}, {"静湖 ": 26}, {"音乐学院": 18}, {"风雨球场": 25},
-                {"风雨球馆": 21}]
-
-    for labe in labelmap:
-        if list(labe)[0] == res:
-            resu = list(labe.values())[0]
-            print(list(labe.values())[0])
-            break
-    return jsonify({'code': 200, 'data': resu})
+    return jsonify({'code': 200, 'data': res})
 
 
 @app.route('/getSceneData', methods=['GET'])
@@ -169,18 +156,18 @@ def modifyRouteData():
 @app.route('/getScenePhoto', methods=['POST'])
 def getScenePhoto():
     Id = json.loads(request.get_data())['Id']
-    dirs = os.listdir('./scenePhotos/' + Id)
+    dirs = os.listdir('C:/upload/scenePhotos/' + Id)
     for i in range(len(dirs)):
-        dirs[i] = 'http://121.41.99.200/backend/images/scenePhotos/' + Id + dirs[i]
+        dirs[i] = 'http://47.99.147.35:8081/images/scenePhotos/' + Id + dirs[i]
     return jsonify({'code': 200, 'data': dirs})
 
 
 @app.route('/getRoutePhoto', methods=['POST'])
 def getRoutePhoto():
     Id = json.loads(request.get_data())['Id']
-    dirs = os.listdir('./routePhotos/' + Id)
+    dirs = os.listdir('C:/upload/routePhotos/' + Id)
     for i in range(len(dirs)):
-        dirs[i] = 'http://121.41.99.200/backend/images/routePhotos/' + Id + dirs[i]
+        dirs[i] = 'http://47.99.147.35:8081/images/routePhotos/' + Id + dirs[i]
     return jsonify({'code': 200, 'data': dirs})
 
 
@@ -190,7 +177,7 @@ def publicScenePhoto():
     Id = data['Id']
     img_data = base64.b64decode(data['imgPath'])
     rname = randomStr(Id)
-    with open('./images/scenePhotos/' + Id + '/' + rname + '.jpg', 'wb') as fp:
+    with open('C:/upload/images/scenePhotos/' + Id + '/' + rname + '.jpg', 'wb') as fp:
         fp.write(img_data)
     return jsonify({'code': 200, 'innerPath': 'images/scenePhotos/' + Id + '/' + rname + '.jpg'})
 
@@ -201,7 +188,7 @@ def publicRoutePhoto():
     Id = data['Id']
     img_data = base64.b64decode(data['imgPath'])
     rname = randomStr(Id)
-    with open('./images/routePhotos/' + Id + '/' + rname + '.jpg', 'wb') as fp:
+    with open('C:/upload/images/routePhotos/' + Id + '/' + rname + '.jpg', 'wb') as fp:
         fp.write(img_data)
     return jsonify({'code': 200, 'innerPath': 'images/routePhotos/' + Id + '/' + rname + '.jpg'})
 
@@ -210,7 +197,7 @@ def publicCommentPhoto():
     data = json.loads(request.get_data())
     img_data = base64.b64decode(data['imgPath'])
     rname = randomStr(0)
-    with open('./images/commentPhotos/' + rname + '.jpg', 'wb') as fp:
+    with open('C:/upload/images/commentPhotos/' + rname + '.jpg', 'wb') as fp:
         fp.write(img_data)
     return jsonify({'code': 200, 'innerPath': 'images/commentPhotos/' + rname + '.jpg'})
 def randomStr(Id, randomlength=12):
@@ -220,7 +207,7 @@ def randomStr(Id, randomlength=12):
     import random
     for i in range(randomlength):
         str += chars[random.randint(0, length)]
-    if os.path.exists('./scenePhotos/Id/' + str + '.jpg'):
+    if os.path.exists('C:/upload/scenePhotos/Id/' + str + '.jpg'):
         str = randomStr(Id)
     return str
 

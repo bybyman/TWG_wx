@@ -2,6 +2,9 @@ const app = getApp();
 
 Page({
     data: {
+        defaultData: {
+            title: '景点详细信息'
+        },
         scene: {},
         dividorMargin: '70rpx',
         showBars: [1, 0, 0, 0],
@@ -23,7 +26,7 @@ Page({
             app.globalData.jumpData.map2detail = null;
         }
         this.setData({
-            image: `${app.globalData.currentServer}/backend/images/scenes/${this.data.scene.Id}.jpg`
+            image: `${app.globalData.currentServer}:8081/images/scenes/${this.data.scene.Id}.jpg`
         })
         wx.request({
             url: `${app.globalData.currentServer}:5000/getScenePhotos`,

@@ -195,7 +195,7 @@ Page({
             getRouteRecursive(polypoints, sfpolypoints, 0, that)
             this.setData({
                 cardName: route.Name,
-                cardPhoto: `${app.globalData.currentServer}/backend/routes/${route.Id}.jpg`,
+                cardPhoto: `${app.globalData.currentServer}/images/routes/${route.Id}.jpg`,
                 destDist: route.Time + ' 分钟' + route.Distance,
                 markers: markers
             })
@@ -252,10 +252,11 @@ Page({
         return null;
     },
     setCard: function (scene) {
+        let desdis = getDistance(this.data.latitude, this.data.longitude, scene.Center[0], scene.Center[1]).toFixed(2)
         this.setData({
             cardName: scene.Name,
-            cardPhoto: `${app.globalData.currentServer}/backend/images/scenes/${scene.Id}.jpg`,
-            destDist: getDistance(this.data.latitude, this.data.longitude, scene.Center[0], scene.Center[1]).toFixed(2)
+            cardPhoto: `${app.globalData.currentServer}:8081/images/scenes/${scene.Id}.jpg`,
+            destDist: desdis>10000 ? '大于10000' : desdis
         })
         this.setData({
             showDetailCard: true,

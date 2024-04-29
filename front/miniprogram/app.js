@@ -62,11 +62,16 @@ App({
         method: 'GET',
         success: function (res) {
           console.log(res)
-          that.globalData.sceneData = res.data.data
-          wx.setStorageSync('sceneData', res.data.data)
+          let scenes = res.data.data
+          that.globalData.TWG = scenes.find((item)=>{return item.Id=="00"})
+          let tscenes = scenes.filter((item)=>{
+            return item.Id != "00"
+          })
+          console.log(tscenes)
+          that.globalData.sceneData = tscenes
+          wx.setStorageSync('sceneData', tscenes)
         },
         fail(res) {
-          console.log(that.globalData.currentServer)
           console.log(res)
         }
       })

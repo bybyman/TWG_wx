@@ -1,3 +1,4 @@
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
 <view class="sd-flex-col page">
     <view class="sd-flex-row sd-justify-between sd-items-center section" style="background-image: url({{image}});">
 <!--    style="background-image: url('https://ide.code.fun/api/image?token=655f92f0fcfbac001134afb0&name=2f7712ecc301a21fdac4004d5bc230f2.png');">-->

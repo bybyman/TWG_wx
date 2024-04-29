@@ -28,3 +28,6 @@ def ImageToText_Handle():
             max_tokens=300,
         )
     return response.choices[0].message.content
+
+if __name__=='__main__':
+    print(ImageToText_Handle())
