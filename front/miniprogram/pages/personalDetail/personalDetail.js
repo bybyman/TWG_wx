@@ -5,6 +5,7 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 
 Page({
     data: {
+      defaultData: {"title": "个人信息"},
         avatarUrl: defaultAvatarUrl,
         theme: wx.getSystemInfoSync().theme,
         userInfo: {},

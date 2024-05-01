@@ -22,7 +22,7 @@ Page({
     data: {
         defaultData:{"title": "路线推荐"},
         routes: [],
-        imagePrefix: `${app.globalData.currentServer}/backend/images/routes/`,
+        imagePrefix: `${app.globalData.currentServer}:8081/images/routes/`,
         cataRoutes: [],
         routeShow: [],
         currentShow:{

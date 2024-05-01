@@ -1,6 +1,7 @@
 const app = getApp();
 Page({
     data: {
+        defaultData: {"title": "信息管理"},
         scenes: [],
         routes: [],
         imagePrefix: `${app.globalData.currentServer}/backend/images/scenes/`,

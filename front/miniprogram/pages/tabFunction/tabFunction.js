@@ -21,8 +21,8 @@ Page({
       })
     },
     toWeather: function () {
-        wx.switchTab({
-            url: '../tabSpace/tabSpace',
+        wx.navigateTo({
+          url: '/pages/AIGenerate/index/index',
         })
     },
     toCultureStore: function () {

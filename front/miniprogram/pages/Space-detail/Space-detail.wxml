@@ -18,7 +18,7 @@
       <view class="content">
         <view class="input">
           <textarea value="{{comment}}" placeholder="{{content}}"/>
-          <button class="publish">发布定位打卡</button>
+          <button class="publish" bind:tap="addComment">发布定位打卡</button>
         </view>
       </view>
       <view class="foot">

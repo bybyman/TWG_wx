@@ -1,0 +1,28 @@
+<!--pages/AIGenerate/index/index.wxml-->
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
+<view class="box">
+  <view class="inputbox">
+    <input type="text" placeholder="请输入你想提问的问题吧~"/>
+  </view>
+    <view style="margin: 15rpx 0;">
+        <view class="title" bind:tap="goToText">
+          <image src="http://47.99.147.35:8081/images/AI-text-icon.png" mode=""/>
+          <span>AI文本生成</span>
+        </view>
+        <view class="caution">请上传一张图片，为您生成描述性文本</view>
+    </view>
+    <view >
+        <view class="title" bind:tap="goToTranslate">
+          <image style="margin-right: 20rpx;" src="http://47.99.147.35:8081/images/AI-transform-icon.png" mode=""/>
+          <span>AI风格转化 </span>
+        </view>
+        <view class="caution">请上传一张图片，为您转化为不同风格图片</view>
+    </view>
+    <view class="imgbox">
+      <image wx:if="{{show}}" src="{{src}}" alt="" bind:tap="addImg"/>
+      <image wx:if="{{!show}}" src="http://47.99.147.35:8081/images/upload.png" bind:tap="addImg"></image>
+    </view>
+    <view class="robot">
+      <image src="http://47.99.147.35:8081/images/robot.png" mode=""/>
+    </view>
+</view>

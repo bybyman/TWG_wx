@@ -1,5 +1,7 @@
 <!--pages/Introduction/Introduction.wxml-->
 <view>
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+
     <view class="container">
         <view class="title" style="font-weight: bold">JXNU导航咨询系统</view>
         <view class="content">

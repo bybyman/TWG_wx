@@ -1,0 +1,33 @@
+<!--pages/AIGenerate/AITranslate/AITranslate.wxml-->
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
+<view class="box">
+  <view class="imgbox"  wx:if="{{show}}">
+    <image src="http://47.99.147.35:8081/images/AI-style-Gen.png"></image>
+    <span>AI风格转化</span>
+  </view>
+  <view class="banner">
+    <image src="{{imageUrl}}" mode=""/>
+  </view>
+  <view>
+    <view class="content" style="margin-top: 40rpx;">
+      <view wx:if="{{show}}">
+        <p>您可以尝试生成以下内容</p>
+        <p>➣<span>素描风</span></p>
+        <p>➣<span>油画风</span></p>
+        <p>➣<span>动漫风</span></p>
+        <p>➣<span>...</span></p>
+      </view>
+    </view>
+  </view>
+  <view class="input" wx:if="{{show}}">
+      <textarea bindinput="getContent" value="{{content}}" placeholder="您可以输入任何您想要生成的图片主题，我将为您生成对应图片。" placeholder-style='color: red;' />
+      <button bind:tap="startGen">开始生成</button>
+  </view>
+  <view class="input2" wx:if="{{!show}}">
+    <textarea class="muytext" value="" disabled="true" placeholder="我已经完成作品，欢迎您提出宝贵的意见和建议，帮助我快速进步~~" placeholder-style='color: red;' />
+    <view class="content">
+      <p bind:tap="startGen"><image src="http://47.99.147.35:8081/images/reGen.png" mode=""/><span>重新生成</span></p>
+    </view>
+  </view>
+</view>
+

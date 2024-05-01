@@ -1,0 +1,55 @@
+/* pages/AIGenerate/index/index.wxss */
+.box{
+  background-image: url(http://47.99.147.35:8081/images/AI-Background.png);
+  background-size: contain;
+  height: 100%;
+}
+.inputbox{
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+.inputbox input{
+  box-sizing: border-box;
+  padding-left: 15rpx;
+  width: 700rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  background-color: #ffffff;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 40rpx;
+}
+.title image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.caution{
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+.imgbox{
+  margin-top: 30rpx;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.imgbox image{
+  width: 250rpx;
+  height: 100rpx;
+}
+.robot{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30rpx;
+  margin-top: 30rpx;
+}
+.robot image{
+  height: 600rpx;
+  width: 480rpx;
+}

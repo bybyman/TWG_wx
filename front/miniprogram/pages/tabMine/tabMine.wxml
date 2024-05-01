@@ -25,7 +25,7 @@
         <image class="pic" src="/images/personal/personal.png"/>
         <view class="txt">个人信息</view>
       </navigator>
-      <navigator class="box" url="/pages/about_update/about_update" bindtap="toSceneManager">
+      <navigator class="box" url="/pages/sceneManager/sceneManager" >
         <image class="pic" src="/images/personal/manage.png"/>
         <view class="txt">信息管理</view>
       </navigator>

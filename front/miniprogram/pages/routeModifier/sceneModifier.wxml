@@ -1,4 +1,6 @@
 <view class="sm-flex-col page">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+
     <view class="sm-flex-col sm-flex-1 group_2">
         <view class="sm-flex-col sm-justify-start sm-self-stretch sm-relative section" style="background-image: url({{imgPrefix + scene.Id + '.jpg'}})">
             <view class="section_2"></view>

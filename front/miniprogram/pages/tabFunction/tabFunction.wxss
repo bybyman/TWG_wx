@@ -350,3 +350,11 @@ text {
   width: 115rpx;
   height: 55rpx;
 }
+.imageAi{
+  width: 100rpx;
+  height: 100rpx;
+}
+.imgRoute{
+  height: 96rpx;
+  width: 72rpx;
+}

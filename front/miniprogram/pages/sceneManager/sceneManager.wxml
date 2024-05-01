@@ -1,4 +1,6 @@
 <view class="sl-flex-col sl-flex-1 group">
+  <MyNavigation default-data="{{defaultData}}"></MyNavigation>
+
     <view class="sl-flex-col group_2">
         <view class="sl-flex-row sl-justify-between group_6">
             <view class="sl-flex-row sl-justify-start sl-items-center button" data-mindex="0" bindtap="switchManplay">

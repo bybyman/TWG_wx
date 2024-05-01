@@ -2,6 +2,7 @@ const app = getApp();
 
 Page({
     data: {
+      defaultData: {"title": "路线详情"},
         scene: {},
         dividorMargin: '70rpx',
         showBars: [1, 0, 0, 0],

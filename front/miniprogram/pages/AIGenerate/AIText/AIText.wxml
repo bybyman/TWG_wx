@@ -1,0 +1,37 @@
+<!--pages/AIGenerate/AIText/AIText.wxml-->
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
+<view class="box">
+  <view class="imgbox"  wx:if="{{show}}">
+    <image src="http://47.99.147.35:8081/images/AI-text-Gen.png"></image>
+    <span>AI文本生成</span>
+  </view>
+  <view class="banner">
+    <image src="{{imageUrl}}" mode=""/>
+  </view>
+  <view>
+    <view class="content" style="margin-top: 40rpx;">
+      <view wx:if="{{show}}">
+        <p>您可以尝试生成以下内容</p>
+        <p>➣<span>诗歌</span></p>
+        <p>➣<span>散文</span></p>
+        <p>➣<span>朋友圈文案</span></p>
+        <p>➣<span>...</span></p>
+      </view>
+      <view>
+        <view class="return" wx:if="{{!show}}">
+          <text decode="true">&emsp;&emsp;</text>{{result}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="input" wx:if="{{show}}">
+      <textarea bindinput="getContent" value="{{content}}" placeholder="您可以输入任何您想要创作的文本主题，我将为您生成对应文本。" placeholder-style='color: red;' />
+      <button bind:tap="startGen">开始生成</button>
+  </view>
+  <view class="input2" wx:if="{{!show}}">
+    <textarea class="muytext" value="" disabled="true" placeholder="我已经完成作品，欢迎您提出宝贵的意见和建议，帮助我快速进步~~" placeholder-style='color: red;' />
+    <view class="content">
+      <p bind:tap="startGen"><image src="http://47.99.147.35:8081/images/reGen.png" mode=""/><span>重新生成</span></p>
+    </view>
+  </view>
+</view>

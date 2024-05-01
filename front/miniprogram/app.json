@@ -39,7 +39,10 @@
     "pages/poemCollection/poemCollection",
     "pages/cultureStore/cultureStore",
     "pages/BBS-detail/BBS-detail",
-    "pages/Space-detail/Space-detail"
+    "pages/Space-detail/Space-detail",
+    "pages/AIGenerate/index/index",
+    "pages/AIGenerate/AIText/AIText",
+    "pages/AIGenerate/AITranslate/AITranslate"
   ],
   "window": {
     "navigationStyle": "custom",

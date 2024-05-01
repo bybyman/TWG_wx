@@ -1,5 +1,6 @@
 Page({
     data: {
+      defaultData: {"title": "信息管理"},
         scene: {},
         ss: [],
         imgPrefix: getApp().globalData.currentServer + '/backend/images/routes/',

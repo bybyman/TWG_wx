@@ -47,7 +47,7 @@
       </view>
       <view class="flex-col items-center grid-item space-y-9" bindtap="toRouteList">
         <image
-                class="image_7"
+                class="imgRoute"
                 src="/images/functionIcon/3.png"
         />
         <text class="font_2">路线推荐</text>
@@ -61,10 +61,10 @@
       </view>
       <view class="flex-col items-center grid-item space-y-9" bindtap="toWeather">
         <image
-                class="image_7"
+                class="imageAi"
                 src="/images/functionIcon/5.png"
         />
-        <text class="font_2">VR全景</text>
+        <text class="font_2">AI生成</text>
       </view>
       <view class="flex-col items-center grid-item space-y-9" bindtap="toSceneRec">
         <image

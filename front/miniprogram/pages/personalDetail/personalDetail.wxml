@@ -1,3 +1,5 @@
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
+
 <view data-weui-theme="{{theme}}">
     <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
         <image class="avatar" src="{{avatarUrl}}"></image>

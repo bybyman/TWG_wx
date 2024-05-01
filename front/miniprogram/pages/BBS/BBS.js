@@ -51,6 +51,13 @@ Page({
           }
         })
       }
+      if(this.data.content == ""){
+        wx.showToast({
+          title: '请先输入评论',
+          icon: "none"
+        })
+        return ;
+      }
       var that = this
       var commentId = util.uuid()
       this.setData({
@@ -75,6 +82,9 @@ Page({
               setTimeout(function(){
                 that.getComment()
                 wx.hideLoading()
+                wx.showToast({
+                  title: '评论成功',
+                })
                 that.setData({
                   content:"",
                   imgList:[]

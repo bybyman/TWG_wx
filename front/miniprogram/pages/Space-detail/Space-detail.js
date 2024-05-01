@@ -1,5 +1,6 @@
 
 // pages/Space-detail/Space-detail.js
+import util from '../../utils/util'
 Page({
 
   /**
@@ -69,6 +70,13 @@ Page({
           }
         }
       })
+    }
+    if(this.data.content == ""){
+      wx.showToast({
+        title: '请先输入评论',
+        icon: "none"
+      })
+      return ;
     }
    var that = this
    var commentId = util.uuid()

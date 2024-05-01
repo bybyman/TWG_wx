@@ -1,5 +1,8 @@
 <!--pages/about_intro/about_intro.wxml-->
+<MyNavigation default-data="{{defaultData}}"></MyNavigation>
+
 <view class="container">
+
     <view class="header">
         <text class="title">暂无消息</text>
     </view>
